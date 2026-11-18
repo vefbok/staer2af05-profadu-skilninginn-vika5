@@ -178,11 +178,15 @@ html[data-theme=dark] .save-warn{background:#33281a;border-color:#d39b55}}
 details.leid{margin:8px 0}details.leid>summary{font-weight:650}
 #tpoeGraph{touch-action:pan-y}#tpoeGraph.drag-on{cursor:ew-resize}#tpoeGraph:focus-visible{outline:3px solid #7aafde;outline-offset:2px}
 #tpoeRead{font-variant-numeric:tabular-nums}
+nav.tabs .nav-toggle{font-size:.8rem;padding:6px 10px;border-radius:9px;align-self:center;margin-left:auto}
+nav.tabs.collapsed{background:transparent!important;pointer-events:none;padding:6px 0}nav.tabs.collapsed .tab{display:none}nav.tabs.collapsed .nav-toggle{pointer-events:auto;margin-left:0;box-shadow:0 2px 8px #0003}
+html:not(.js) .nav-toggle{display:none}
+html[data-theme=dark] nav.tabs .nav-toggle{background:#17232f;color:#cfe1ef;border-color:#2e4457}
 </style>
 </head><body>
 <a class="skip" href="#main">Fara í efni</a>
 <header><div class="eyebrow">STÆR2AF05 · Skurðpunktar og ójöfnur</div><h1>Vefbók · Vika 5</h1><button type="button" class="theme-btn" id="themeBtn" aria-pressed="false">Dökkt útlit</button><p>Ein síða fyrir hvern kennsludag. Lestu efnið, skoðaðu sýnidæmin og reiknaðu síðan æfingadæmin neðst á síðunni í stílabók. Þegar þú hefur svarað öllum spurningunum í köflunum opnast skiladæmið. Í lokin vistarðu vinnuskrána sem PDF.</p></header>
-<main id="main"><p class="save-warn" id="saveWarn" role="alert" hidden><strong>Ekki tókst að vista.</strong> Hök og svör geymast ekki í þessum vafra. Opnaðu vefbókina í venjulegum vafraflipa (ekki einkaflipa) eða vistaðu vinnuskrána sem PDF áður en þú lokar.</p><p class="nojs-note"><strong>Gagnvirkir hlutar virka ekki í þessari forskoðun.</strong> Allir dagar birtast hér hver á eftir öðrum, en vísbendingar, lausnir, hök og vinnuskrá krefjast þess að síðan sé opnuð í vafra (t.d. Chrome, Safari eða Edge).</p><nav class="tabs" aria-label="Kennsludagar og vikuverkefni"><span class="tab off" aria-disabled="true" title="Miðspannarmat · engin námssíða">Mánudagur</span><span class="tab off" aria-disabled="true" title="Könnun 4 · engin námssíða">Þriðjudagur</span><a class="tab" href="#midvikudagur">Miðvikudagur</a><a class="tab" href="#fimmtudagur">Fimmtudagur</a><a class="tab" href="#fostudagur">Föstudagur</a><a class="tab" href="#skiladaemi">Skiladæmi</a><a class="tab" href="#vinnuskra">Vinnuskrá</a></nav>
+<main id="main"><p class="save-warn" id="saveWarn" role="alert" hidden><strong>Ekki tókst að vista.</strong> Hök og svör geymast ekki í þessum vafra. Opnaðu vefbókina í venjulegum vafraflipa (ekki einkaflipa) eða vistaðu vinnuskrána sem PDF áður en þú lokar.</p><p class="nojs-note"><strong>Gagnvirkir hlutar virka ekki í þessari forskoðun.</strong> Allir dagar birtast hér hver á eftir öðrum, en vísbendingar, lausnir, hök og vinnuskrá krefjast þess að síðan sé opnuð í vafra (t.d. Chrome, Safari eða Edge).</p><nav class="tabs" id="dayTabs" aria-label="Kennsludagar og vikuverkefni"><span class="tab off" aria-disabled="true" title="Miðspannarmat · engin námssíða">Mánudagur</span><span class="tab off" aria-disabled="true" title="Könnun 4 · engin námssíða">Þriðjudagur</span><a class="tab" href="#midvikudagur">Miðvikudagur</a><a class="tab" href="#fimmtudagur">Fimmtudagur</a><a class="tab" href="#fostudagur">Föstudagur</a><a class="tab" href="#skiladaemi">Skiladæmi</a><a class="tab" href="#vinnuskra">Vinnuskrá</a><button type="button" class="nav-toggle" id="navToggle" aria-expanded="true" aria-controls="dayTabs">▲ Fela</button></nav>
 <section id="midvikudagur" class="day" aria-labelledby="mid-h">
 
 <div class="panel">
@@ -1179,7 +1183,7 @@ details.leid{margin:8px 0}details.leid>summary{font-weight:650}
 'use strict';
 // Vistunarlykill viku 5. Má ekki breyta eftir birtingu; annars glatast vistuð hök nemenda.
 const KEY = 'staer2af05-v5-vefbok-v1';
-const REV = 'STAER2AF05-V05-VB-v1.0-20261118';
+const REV = 'STAER2AF05-V05-VB-v1.0.1-20261118';
 const $ = id => document.getElementById(id);
 // Svið úr v0.3 (done, quiz, poe, k) eru óbreytt. v0.4 bætir við tpoe, fpoe og tasks.
 let state = { done: {}, quiz: {}, poe: {}, k: 2, tpoe: {}, fpoe: null, tasks: {} };
@@ -1611,6 +1615,26 @@ function setupTheme() {
   });
 }
 
+
+/* ---------- Fela / sýna dagastikuna (sér lykill; snertir ekki vistuð svör) ---------- */
+const NAV_KEY = 'staer2af05-stika';
+function applyNav(hidden) {
+  const nav = $('dayTabs'), b = $('navToggle'); if (!nav || !b) return;
+  nav.classList.toggle('collapsed', hidden);
+  b.textContent = hidden ? '▼ Dagar' : '▲ Fela';
+  b.setAttribute('aria-expanded', String(!hidden));
+  b.setAttribute('aria-label', hidden ? 'Sýna dagastikuna' : 'Fela dagastikuna');
+  b.title = hidden ? 'Sýna dagastikuna' : 'Fela dagastikuna';
+}
+function setupNavToggle() {
+  let h = false; try { h = localStorage.getItem(NAV_KEY) === 'falin'; } catch (e) {}
+  applyNav(h);
+  $('navToggle').addEventListener('click', () => {
+    const now = !$('dayTabs').classList.contains('collapsed');
+    applyNav(now); try { localStorage.setItem(NAV_KEY, now ? 'falin' : 'synd'); } catch (e) {}
+  });
+}
+
 /* ---------- Ræsing ---------- */
 const NL = {
   nl1: { min: -3, max: 5, ticks: [-1, 3], segs: [{ a: -1, b: 3, ca: false, cb: false }] },
@@ -1623,6 +1647,7 @@ const NL = {
 };
 function init() {
   setupTheme();
+  setupNavToggle();
   load();
   try { localStorage.setItem(KEY + '.prof', '1'); localStorage.removeItem(KEY + '.prof'); } catch (e) { storageOK = false; $('saveWarn').hidden = false; }
   document.querySelectorAll('fieldset.q, fieldset.poe, fieldset.tpoe, fieldset.fpoe').forEach(fs => { if (!fs.id) fs.id = 'sp-' + (fs.dataset.q || 'poe' + fs.dataset.line); });
