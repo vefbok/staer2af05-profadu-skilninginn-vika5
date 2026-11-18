@@ -174,6 +174,10 @@ a.jump{font-weight:700;color:#145b80}
 html[data-theme=dark] details.exsd .sd-body,html[data-theme=dark] .dayplan{background:#1e2c39;color:#e3ebf2}
 html[data-theme=dark] .save-warn{background:#33281a;border-color:#d39b55}}
 @media print{#backBtn,.save-warn{display:none!important}}
+/* v0.9: val á leið í sýnidæmi og dráttarpunktur */
+details.leid{margin:8px 0}details.leid>summary{font-weight:650}
+#tpoeGraph{touch-action:pan-y}#tpoeGraph.drag-on{cursor:ew-resize}#tpoeGraph:focus-visible{outline:3px solid #7aafde;outline-offset:2px}
+#tpoeRead{font-variant-numeric:tabular-nums}
 </style>
 </head><body>
 <a class="skip" href="#main">Fara í efni</a>
@@ -468,12 +472,12 @@ html[data-theme=dark] .save-warn{background:#33281a;border-color:#d39b55}}
 <div class="panel">
 <div class="tag">Fimmtudagur 19. nóvember</div>
 <h2 id="fim-h">Annars stigs ójöfnur</h2>
-<p>Í gær fundum við hvar fleygbogi og lína skerast. Í dag spyrjum við: hvar liggur fleygboginn <em>fyrir ofan</em> og hvar <em>fyrir neðan</em>? Svarið er ekki einn punktur heldur heilt bil af x-gildum. Þess vegna lærum við líka að rita bil.</p>
+<p>Í gær fundum við hvar fleygbogi og lína skerast. Í dag spyrjum við: hvar liggur fleygboginn <em>fyrir ofan</em> og hvar <em>fyrir neðan</em>? Svarið er ekki einn punktur heldur heilt bil af x-gildum. Þess vegna lærum við líka að lýsa slíku bili með ójöfnu og á talnalínu.</p>
 <h3>Markmið dagsins</h3>
 <ul class="goals">
 <li>Ég get lesið af grafi fyrir hvaða x fleygbogi er fyrir ofan eða fyrir neðan x-ásinn.</li>
-<li>Ég get ritað lausnamengi sem ójöfnu, á talnalínu og með bilaskrift.</li>
-<li>Ég get leyst annars stigs ójöfnu með núllstöðvum og formerkjum og rökstutt hvort endapunktarnir tilheyra lausnamenginu.</li>
+<li>Ég get skrifað lausnina sem ójöfnu og sýnt hana á talnalínu.</li>
+<li>Ég get leyst annars stigs ójöfnu með núllstöðvum og opnun fleygbogans og rökstutt hvort endapunktarnir tilheyra lausnamenginu.</li>
 </ul>
 <p class="noprint"><a class="jump" href="#t-aefing">Fara í æfingadæmi ↓</a></p>
 </div>
@@ -495,15 +499,16 @@ html[data-theme=dark] .save-warn{background:#33281a;border-color:#d39b55}}
 <h2>Frá skurðpunktum að ójöfnum</h2>
 <p>Í sýnidæmi 2b í gær skárust fleygboginn <math xmlns="http://www.w3.org/1998/Math/MathML"><mi>y</mi><mo>=</mo><msup><mi>x</mi><mn>2</mn></msup><mo>+</mo><mn>1</mn></math> og línan <math xmlns="http://www.w3.org/1998/Math/MathML"><mi>y</mi><mo>=</mo><mi>x</mi><mo>−</mo><mn>1</mn></math> ekki. Fleygboginn liggur alls staðar fyrir ofan línuna, svo <math xmlns="http://www.w3.org/1998/Math/MathML"><msup><mi>x</mi><mn>2</mn></msup><mo>+</mo><mn>1</mn><mo>&gt;</mo><mi>x</mi><mo>−</mo><mn>1</mn></math> fyrir öll x. Þetta er <strong>ójafna</strong>: hún ber saman tvær stærðir með <math xmlns="http://www.w3.org/1998/Math/MathML"><mo>&lt;</mo></math>, <math xmlns="http://www.w3.org/1998/Math/MathML"><mo>&gt;</mo></math>, <math xmlns="http://www.w3.org/1998/Math/MathML"><mo>≤</mo></math> eða <math xmlns="http://www.w3.org/1998/Math/MathML"><mo>≥</mo></math>.</p>
 <p>Þegar allir liðir eru fluttir á vinstri hlið verður spurningin alltaf sú sama: <strong>Hvar er fleygboginn <math xmlns="http://www.w3.org/1998/Math/MathML"><mi>y</mi><mo>=</mo><mi>a</mi><msup><mi>x</mi><mn>2</mn></msup><mo>+</mo><mi>b</mi><mi>x</mi><mo>+</mo><mi>c</mi></math> fyrir ofan x-ásinn (<math xmlns="http://www.w3.org/1998/Math/MathML"><mi>y</mi><mo>&gt;</mo><mn>0</mn></math>) og hvar fyrir neðan (<math xmlns="http://www.w3.org/1998/Math/MathML"><mi>y</mi><mo>&lt;</mo><mn>0</mn></math>)?</strong></p>
-<p>Fleygboginn getur aðeins farið yfir x-ásinn í núllstöð. Þess vegna skipta núllstöðvarnar x-ásnum í bil, og á hverju bili hefur y sama formerki allt bilið. Það nægir því að prófa eitt gildi á hverju bili.</p>
+<p>Fleygboginn getur aðeins farið yfir x-ásinn í núllstöð. Þess vegna skipta núllstöðvarnar x-ásnum í bil, og á hverju bili hefur y sama formerki allt bilið. Það nægir því að prófa eitt gildi á hverju bili. Opnun fleygbogans segir það líka beint: ef hann opnast upp er hann fyrir neðan ásinn á milli núllstöðvanna og fyrir ofan utan við þær. Ef hann opnast niður er því öfugt farið.</p>
 </div>
 
 <div class="panel">
 <div class="tag">Rannsakaðu</div>
 <h2>Spáðu fyrst, skoðaðu svo</h2>
-<p>Hér er fleygboginn <math xmlns="http://www.w3.org/1998/Math/MathML"><mi>y</mi><mo>=</mo><msup><mi>x</mi><mn>2</mn></msup><mo>−</mo><mn>2</mn><mi>x</mi><mo>−</mo><mn>3</mn><mo>=</mo><mo stretchy="false" lspace="0" rspace="0">(</mo><mi>x</mi><mo>+</mo><mn>1</mn><mo stretchy="false" lspace="0" rspace="0">)</mo><mo stretchy="false" lspace="0" rspace="0">(</mo><mi>x</mi><mo>−</mo><mn>3</mn><mo stretchy="false" lspace="0" rspace="0">)</mo></math> með núllstöðvarnar <math xmlns="http://www.w3.org/1998/Math/MathML"><mo form="prefix" lspace="0" rspace="0">−</mo><mn>1</mn></math> og <math xmlns="http://www.w3.org/1998/Math/MathML"><mn>3</mn></math>. Spáðu fyrir um svarið. Grafið sýnir það þegar þú hefur valið, og spáin læsist.</p>
+<p>Hér er fleygboginn <math xmlns="http://www.w3.org/1998/Math/MathML"><mi>y</mi><mo>=</mo><msup><mi>x</mi><mn>2</mn></msup><mo>−</mo><mn>2</mn><mi>x</mi><mo>−</mo><mn>3</mn><mo>=</mo><mo stretchy="false" lspace="0" rspace="0">(</mo><mi>x</mi><mo>+</mo><mn>1</mn><mo stretchy="false" lspace="0" rspace="0">)</mo><mo stretchy="false" lspace="0" rspace="0">(</mo><mi>x</mi><mo>−</mo><mn>3</mn><mo stretchy="false" lspace="0" rspace="0">)</mo></math> með núllstöðvarnar <math xmlns="http://www.w3.org/1998/Math/MathML"><mo form="prefix" lspace="0" rspace="0">−</mo><mn>1</mn></math> og <math xmlns="http://www.w3.org/1998/Math/MathML"><mn>3</mn></math>. Spáðu fyrir um svarið. Grafið sýnir það þegar þú hefur valið, og spáin læsist. Eftir fyrstu spána birtist punktur á ferlinum. Dragðu hann eftir ferlinum (eða smelltu á grafið og notaðu örvatakkana) og fylgstu með x- og y-gildinu.</p>
 <div class="grid">
-<div><svg id="tpoeGraph" class="plot" viewBox="0 0 460 360" role="img" aria-label="Fleygboginn y = x í öðru veldi mínus 2x mínus 3 með núllstöðvar í x = −1 og x = 3"></svg></div>
+<div><svg id="tpoeGraph" class="plot" viewBox="0 0 460 360" role="img" aria-label="Fleygboginn y = x í öðru veldi mínus 2x mínus 3 með núllstöðvar í x = −1 og x = 3"></svg>
+<p class="feedback" id="tpoeRead" aria-live="polite" hidden></p></div>
 <div>
 <fieldset class="tpoe" data-q="th1" data-correct="a"><legend>a) Fyrir hvaða x er <math xmlns="http://www.w3.org/1998/Math/MathML"><mi>y</mi><mo>&lt;</mo><mn>0</mn></math>?</legend>
 <div class="choice-col"><button type="button" data-val="a"><math xmlns="http://www.w3.org/1998/Math/MathML"><mo form="prefix" lspace="0" rspace="0">−</mo><mn>1</mn><mo>&lt;</mo><mi>x</mi><mo>&lt;</mo><mn>3</mn></math></button><button type="button" data-val="b"><math xmlns="http://www.w3.org/1998/Math/MathML"><mi>x</mi><mo>&lt;</mo><mo form="prefix" lspace="0" rspace="0">−</mo><mn>1</mn><mtext>&#160;eða&#160;</mtext><mi>x</mi><mo>&gt;</mo><mn>3</mn></math></button><button type="button" data-val="c"><math xmlns="http://www.w3.org/1998/Math/MathML"><mo form="prefix" lspace="0" rspace="0">−</mo><mn>1</mn><mo>≤</mo><mi>x</mi><mo>≤</mo><mn>3</mn></math></button><button type="button" data-val="d"><math xmlns="http://www.w3.org/1998/Math/MathML"><mi>x</mi><mo>&lt;</mo><mn>3</mn></math></button></div>
@@ -527,23 +532,22 @@ html[data-theme=dark] .save-warn{background:#33281a;border-color:#d39b55}}
 
 <div class="panel" id="t-bil">
 <div class="tag">Hugmyndin</div>
-<h2>Fjórar leiðir til að rita lausnamengi</h2>
-<p>Lausnamengi ójöfnu er yfirleitt <strong>bil</strong> á talnalínunni, eða fleiri en eitt bil. Það má rita á fjóra vegu. <strong>Svigi</strong> (&#160;) merkir að endapunkturinn er <em>ekki</em> með. <strong>Hornklofi</strong> [&#160;] merkir að hann <em>er</em> með. Á talnalínu er opinn hringur við endapunkt sem er ekki með og fylltur punktur við endapunkt sem er með.</p>
-<div class="table-wrap"><table class="bil-table"><thead><tr><th scope="col">Ójafna</th><th scope="col">Í orðum</th><th scope="col">Talnalína</th><th scope="col">Bilaskrift</th></tr></thead><tbody>
-<tr><td data-l="Ójafna"><math xmlns="http://www.w3.org/1998/Math/MathML"><mo form="prefix" lspace="0" rspace="0">−</mo><mn>1</mn><mo>&lt;</mo><mi>x</mi><mo>&lt;</mo><mn>3</mn></math></td><td data-l="Í orðum">Milli −1 og 3, endapunktar ekki með</td><td data-l="Talnalína"><svg class="numline" id="nl1" viewBox="0 0 220 44" role="img" aria-label="Talnalína: opinn hringur við −1 og 3, strik á milli"></svg></td><td data-l="Bilaskrift"><math xmlns="http://www.w3.org/1998/Math/MathML"><mo stretchy="false" lspace="0" rspace="0">(</mo><mo form="prefix" lspace="0" rspace="0">−</mo><mn>1</mn><mo separator="true" lspace="0" rspace="0.35em">,</mo><mn>3</mn><mo stretchy="false" lspace="0" rspace="0">)</mo></math></td></tr>
-<tr><td data-l="Ójafna"><math xmlns="http://www.w3.org/1998/Math/MathML"><mo form="prefix" lspace="0" rspace="0">−</mo><mn>1</mn><mo>≤</mo><mi>x</mi><mo>≤</mo><mn>3</mn></math></td><td data-l="Í orðum">Milli −1 og 3, endapunktar með</td><td data-l="Talnalína"><svg class="numline" id="nl2" viewBox="0 0 220 44" role="img" aria-label="Talnalína: fylltir punktar við −1 og 3, strik á milli"></svg></td><td data-l="Bilaskrift"><math xmlns="http://www.w3.org/1998/Math/MathML"><mo stretchy="false" lspace="0" rspace="0">[</mo><mo form="prefix" lspace="0" rspace="0">−</mo><mn>1</mn><mo separator="true" lspace="0" rspace="0.35em">,</mo><mn>3</mn><mo stretchy="false" lspace="0" rspace="0">]</mo></math></td></tr>
-<tr><td data-l="Ójafna"><math xmlns="http://www.w3.org/1998/Math/MathML"><mo form="prefix" lspace="0" rspace="0">−</mo><mn>2</mn><mo>&lt;</mo><mi>x</mi><mo>≤</mo><mn>4</mn></math></td><td data-l="Í orðum">Stærra en −2 og minna en eða jafnt 4</td><td data-l="Talnalína"><svg class="numline" id="nl3" viewBox="0 0 220 44" role="img" aria-label="Talnalína: opinn hringur við −2, fylltur punktur við 4"></svg></td><td data-l="Bilaskrift"><math xmlns="http://www.w3.org/1998/Math/MathML"><mo stretchy="false" lspace="0" rspace="0">(</mo><mo form="prefix" lspace="0" rspace="0">−</mo><mn>2</mn><mo separator="true" lspace="0" rspace="0.35em">,</mo><mn>4</mn><mo stretchy="false" lspace="0" rspace="0">]</mo></math></td></tr>
-<tr><td data-l="Ójafna"><math xmlns="http://www.w3.org/1998/Math/MathML"><mi>x</mi><mo>≥</mo><mn>2</mn></math></td><td data-l="Í orðum">2 eða stærra</td><td data-l="Talnalína"><svg class="numline" id="nl4" viewBox="0 0 220 44" role="img" aria-label="Talnalína: fylltur punktur við 2, strik til hægri án enda"></svg></td><td data-l="Bilaskrift"><math xmlns="http://www.w3.org/1998/Math/MathML"><mo stretchy="false" lspace="0" rspace="0">[</mo><mn>2</mn><mo separator="true" lspace="0" rspace="0.35em">,</mo><mi>∞</mi><mo stretchy="false" lspace="0" rspace="0">)</mo></math></td></tr>
-<tr><td data-l="Ójafna"><math xmlns="http://www.w3.org/1998/Math/MathML"><mi>x</mi><mo>&lt;</mo><mo form="prefix" lspace="0" rspace="0">−</mo><mn>1</mn><mtext>&#160;eða&#160;</mtext><mi>x</mi><mo>&gt;</mo><mn>3</mn></math></td><td data-l="Í orðum">Minna en −1 eða stærra en 3</td><td data-l="Talnalína"><svg class="numline" id="nl5" viewBox="0 0 220 44" role="img" aria-label="Talnalína: opnir hringir við −1 og 3, strik til vinstri frá −1 og til hægri frá 3"></svg></td><td data-l="Bilaskrift"><math xmlns="http://www.w3.org/1998/Math/MathML"><mo stretchy="false" lspace="0" rspace="0">(</mo><mo form="prefix" lspace="0" rspace="0">−</mo><mi>∞</mi><mo separator="true" lspace="0" rspace="0.35em">,</mo><mo form="prefix" lspace="0" rspace="0">−</mo><mn>1</mn><mo stretchy="false" lspace="0" rspace="0">)</mo><mtext>&#160;eða&#160;</mtext><mo stretchy="false" lspace="0" rspace="0">(</mo><mn>3</mn><mo separator="true" lspace="0" rspace="0.35em">,</mo><mi>∞</mi><mo stretchy="false" lspace="0" rspace="0">)</mo></math></td></tr>
+<h2>Þrjár leiðir til að lýsa lausninni</h2>
+<p>Lausn ójöfnu er yfirleitt heilt bil á talnalínunni, eða fleiri en eitt bil. Henni má lýsa með <strong>ójöfnu</strong>, <strong>í orðum</strong> eða á <strong>talnalínu</strong>. Á talnalínu er <strong>opinn hringur</strong> við endapunkt sem er ekki með (<math xmlns="http://www.w3.org/1998/Math/MathML"><mo>&lt;</mo></math> eða <math xmlns="http://www.w3.org/1998/Math/MathML"><mo>&gt;</mo></math>) og <strong>fylltur punktur</strong> við endapunkt sem er með (<math xmlns="http://www.w3.org/1998/Math/MathML"><mo>≤</mo></math> eða <math xmlns="http://www.w3.org/1998/Math/MathML"><mo>≥</mo></math>). Ör á enda striksins merkir að bilið haldi endalaust áfram í þá átt.</p>
+<div class="table-wrap"><table class="bil-table"><thead><tr><th scope="col">Ójafna</th><th scope="col">Í orðum</th><th scope="col">Talnalína</th></tr></thead><tbody>
+<tr><td data-l="Ójafna"><math xmlns="http://www.w3.org/1998/Math/MathML"><mo form="prefix" lspace="0" rspace="0">−</mo><mn>1</mn><mo>&lt;</mo><mi>x</mi><mo>&lt;</mo><mn>3</mn></math></td><td data-l="Í orðum">Milli −1 og 3, endapunktar ekki með</td><td data-l="Talnalína"><svg class="numline" id="nl1" viewBox="0 0 220 44" role="img" aria-label="Talnalína: opinn hringur við −1 og 3, strik á milli"></svg></td></tr>
+<tr><td data-l="Ójafna"><math xmlns="http://www.w3.org/1998/Math/MathML"><mo form="prefix" lspace="0" rspace="0">−</mo><mn>1</mn><mo>≤</mo><mi>x</mi><mo>≤</mo><mn>3</mn></math></td><td data-l="Í orðum">Milli −1 og 3, endapunktar með</td><td data-l="Talnalína"><svg class="numline" id="nl2" viewBox="0 0 220 44" role="img" aria-label="Talnalína: fylltir punktar við −1 og 3, strik á milli"></svg></td></tr>
+<tr><td data-l="Ójafna"><math xmlns="http://www.w3.org/1998/Math/MathML"><mo form="prefix" lspace="0" rspace="0">−</mo><mn>2</mn><mo>&lt;</mo><mi>x</mi><mo>≤</mo><mn>4</mn></math></td><td data-l="Í orðum">Stærra en −2 og minna en eða jafnt 4</td><td data-l="Talnalína"><svg class="numline" id="nl3" viewBox="0 0 220 44" role="img" aria-label="Talnalína: opinn hringur við −2, fylltur punktur við 4"></svg></td></tr>
+<tr><td data-l="Ójafna"><math xmlns="http://www.w3.org/1998/Math/MathML"><mi>x</mi><mo>≥</mo><mn>2</mn></math></td><td data-l="Í orðum">2 eða stærra</td><td data-l="Talnalína"><svg class="numline" id="nl4" viewBox="0 0 220 44" role="img" aria-label="Talnalína: fylltur punktur við 2, strik til hægri án enda"></svg></td></tr>
+<tr><td data-l="Ójafna"><math xmlns="http://www.w3.org/1998/Math/MathML"><mi>x</mi><mo>&lt;</mo><mo form="prefix" lspace="0" rspace="0">−</mo><mn>1</mn><mtext>&#160;eða&#160;</mtext><mi>x</mi><mo>&gt;</mo><mn>3</mn></math></td><td data-l="Í orðum">Minna en −1 eða stærra en 3</td><td data-l="Talnalína"><svg class="numline" id="nl5" viewBox="0 0 220 44" role="img" aria-label="Talnalína: opnir hringir við −1 og 3, strik til vinstri frá −1 og til hægri frá 3"></svg></td></tr>
 </tbody></table></div>
 <div class="defbox">
-<h3>Sérstök lausnamengi og reglur</h3>
+<h3>Sérstakar lausnir</h3>
 <ul>
-<li>Ef allar rauntölur uppfylla ójöfnuna er skrifað: <em>allar rauntölur</em>, eða <math xmlns="http://www.w3.org/1998/Math/MathML"><mo stretchy="false" lspace="0" rspace="0">(</mo><mo form="prefix" lspace="0" rspace="0">−</mo><mi>∞</mi><mo separator="true" lspace="0" rspace="0.35em">,</mo><mi>∞</mi><mo stretchy="false" lspace="0" rspace="0">)</mo></math>.</li>
+<li>Ef allar rauntölur uppfylla ójöfnuna er skrifað: <em>allar rauntölur</em>.</li>
 <li>Ef engin tala uppfyllir hana er skrifað: <em>engin lausn</em>.</li>
 <li>Ef aðeins eitt gildi uppfyllir hana er það skrifað beint, t.d. <em>aðeins</em> <math xmlns="http://www.w3.org/1998/Math/MathML"><mi>x</mi><mo>=</mo><mn>2</mn></math>.</li>
-<li><math xmlns="http://www.w3.org/1998/Math/MathML"><mi>∞</mi></math> er ekki tala og er því aldrei endapunktur sem er með. Við <math xmlns="http://www.w3.org/1998/Math/MathML"><mi>∞</mi></math> er alltaf svigi: <math xmlns="http://www.w3.org/1998/Math/MathML"><mo stretchy="false" lspace="0" rspace="0">[</mo><mn>2</mn><mo separator="true" lspace="0" rspace="0.35em">,</mo><mi>∞</mi><mo stretchy="false" lspace="0" rspace="0">)</mo></math>, aldrei <math xmlns="http://www.w3.org/1998/Math/MathML"><mo stretchy="false" lspace="0" rspace="0">[</mo><mn>2</mn><mo separator="true" lspace="0" rspace="0.35em">,</mo><mi>∞</mi><mo stretchy="false" lspace="0" rspace="0">]</mo></math>.</li>
-<li>Ef lausnin er tvö aðskilin bil eru þau tengd með orðinu „eða“, t.d. <math xmlns="http://www.w3.org/1998/Math/MathML"><mo stretchy="false" lspace="0" rspace="0">(</mo><mo form="prefix" lspace="0" rspace="0">−</mo><mi>∞</mi><mo separator="true" lspace="0" rspace="0.35em">,</mo><mo form="prefix" lspace="0" rspace="0">−</mo><mn>1</mn><mo stretchy="false" lspace="0" rspace="0">)</mo><mtext>&#160;eða&#160;</mtext><mo stretchy="false" lspace="0" rspace="0">(</mo><mn>3</mn><mo separator="true" lspace="0" rspace="0.35em">,</mo><mi>∞</mi><mo stretchy="false" lspace="0" rspace="0">)</mo></math>: x er í öðru hvoru bilinu.</li>
+<li>Ef lausnin er tvö aðskilin bil eru þau tengd með orðinu „eða“, t.d. <math xmlns="http://www.w3.org/1998/Math/MathML"><mi>x</mi><mo>&lt;</mo><mo form="prefix" lspace="0" rspace="0">−</mo><mn>1</mn><mtext>&#160;eða&#160;</mtext><mi>x</mi><mo>&gt;</mo><mn>3</mn></math>: x er á öðru hvoru bilinu.</li>
 </ul>
 </div>
 </div>
@@ -558,7 +562,7 @@ html[data-theme=dark] .save-warn{background:#33281a;border-color:#d39b55}}
 <li>Finndu núllstöðvarnar með þáttun eða lausnarformúlu.</li>
 <li>Ákvarðaðu formerkið á hverju bili, annaðhvort með einu prófunargildi á hverju bili eða út frá lögun fleygbogans. Ef <math xmlns="http://www.w3.org/1998/Math/MathML"><mi>a</mi><mo>&gt;</mo><mn>0</mn></math> opnast hann upp og er neikvæður milli núllstöðvanna.</li>
 <li>Veldu bilin sem uppfylla ójöfnuna. Með <math xmlns="http://www.w3.org/1998/Math/MathML"><mo>≤</mo></math> eða <math xmlns="http://www.w3.org/1998/Math/MathML"><mo>≥</mo></math> eru núllstöðvarnar með, en með <math xmlns="http://www.w3.org/1998/Math/MathML"><mo>&lt;</mo></math> eða <math xmlns="http://www.w3.org/1998/Math/MathML"><mo>&gt;</mo></math> eru þær ekki með.</li>
-<li>Ritaðu lausnamengið með bilaskrift og prófaðu eitt gildi.</li>
+<li>Skrifaðu lausnina sem ójöfnu (eða sýndu hana á talnalínu) og prófaðu eitt gildi.</li>
 </ol>
 </div>
 </div>
@@ -573,11 +577,21 @@ html[data-theme=dark] .save-warn{background:#33281a;border-color:#d39b55}}
 <tr><td><math xmlns="http://www.w3.org/1998/Math/MathML"><msup><mi>x</mi><mn>2</mn></msup><mo>+</mo><mi>x</mi><mo>−</mo><mn>2</mn><mo>≤</mo><mn>0</mn></math></td><td>Allt á vinstri hlið. Hvar er fleygboginn fyrir neðan eða á ásnum?</td></tr>
 <tr><td><math xmlns="http://www.w3.org/1998/Math/MathML"><mo stretchy="false" lspace="0" rspace="0">(</mo><mi>x</mi><mo>+</mo><mn>2</mn><mo stretchy="false" lspace="0" rspace="0">)</mo><mo stretchy="false" lspace="0" rspace="0">(</mo><mi>x</mi><mo>−</mo><mn>1</mn><mo stretchy="false" lspace="0" rspace="0">)</mo><mo>≤</mo><mn>0</mn></math></td><td>Þáttun.</td></tr>
 <tr><td><math xmlns="http://www.w3.org/1998/Math/MathML"><mi>x</mi><mo>=</mo><mo form="prefix" lspace="0" rspace="0">−</mo><mn>2</mn><mtext>&#160;eða&#160;</mtext><mi>x</mi><mo>=</mo><mn>1</mn></math></td><td>Núllstöðvar. Þær skipta talnalínunni í þrjú bil.</td></tr>
-<tr><td><span class="tline"><math xmlns="http://www.w3.org/1998/Math/MathML"><mi>x</mi><mo>=</mo><mo form="prefix" lspace="0" rspace="0">−</mo><mn>3</mn></math> gefur <math xmlns="http://www.w3.org/1998/Math/MathML"><mo stretchy="false" lspace="0" rspace="0">(</mo><mo form="prefix" lspace="0" rspace="0">−</mo><mn>1</mn><mo stretchy="false" lspace="0" rspace="0">)</mo><mo stretchy="false" lspace="0" rspace="0">(</mo><mo form="prefix" lspace="0" rspace="0">−</mo><mn>4</mn><mo stretchy="false" lspace="0" rspace="0">)</mo><mo>=</mo><mn>4</mn><mo>&gt;</mo><mn>0</mn></math></span><span class="tline"><math xmlns="http://www.w3.org/1998/Math/MathML"><mi>x</mi><mo>=</mo><mn>0</mn></math> gefur <math xmlns="http://www.w3.org/1998/Math/MathML"><mo stretchy="false" lspace="0" rspace="0">(</mo><mn>2</mn><mo stretchy="false" lspace="0" rspace="0">)</mo><mo stretchy="false" lspace="0" rspace="0">(</mo><mo form="prefix" lspace="0" rspace="0">−</mo><mn>1</mn><mo stretchy="false" lspace="0" rspace="0">)</mo><mo>=</mo><mo form="prefix" lspace="0" rspace="0">−</mo><mn>2</mn><mo>&lt;</mo><mn>0</mn></math></span><span class="tline"><math xmlns="http://www.w3.org/1998/Math/MathML"><mi>x</mi><mo>=</mo><mn>2</mn></math> gefur <math xmlns="http://www.w3.org/1998/Math/MathML"><mo stretchy="false" lspace="0" rspace="0">(</mo><mn>4</mn><mo stretchy="false" lspace="0" rspace="0">)</mo><mo stretchy="false" lspace="0" rspace="0">(</mo><mn>1</mn><mo stretchy="false" lspace="0" rspace="0">)</mo><mo>=</mo><mn>4</mn><mo>&gt;</mo><mn>0</mn></math></span></td><td>Formerkið breytist aðeins í núllstöð, svo eitt prófunargildi á bili nægir.</td></tr>
-<tr><td><math xmlns="http://www.w3.org/1998/Math/MathML"><mo form="prefix" lspace="0" rspace="0">−</mo><mn>2</mn><mo>≤</mo><mi>x</mi><mo>≤</mo><mn>1</mn></math></td><td>Neikvætt á miðbilinu. Með <math xmlns="http://www.w3.org/1998/Math/MathML"><mo>≤</mo></math> eru núllstöðvarnar með.</td></tr>
-<tr><td><span class="tline">Prófun með <math xmlns="http://www.w3.org/1998/Math/MathML"><mi>x</mi><mo>=</mo><mn>0</mn></math>:</span><span class="tline"><math xmlns="http://www.w3.org/1998/Math/MathML"><msup><mn>0</mn><mn>2</mn></msup><mo>+</mo><mn>0</mn><mo>=</mo><mn>0</mn><mo>≤</mo><mn>2</mn></math> ✓</span></td><td>Gildi úr lausninni.</td></tr>
 </tbody></table>
-<p class="answerbox">Lausn: <math xmlns="http://www.w3.org/1998/Math/MathML"><mo stretchy="false" lspace="0" rspace="0">[</mo><mo form="prefix" lspace="0" rspace="0">−</mo><mn>2</mn><mo separator="true" lspace="0" rspace="0.35em">,</mo><mn>1</mn><mo stretchy="false" lspace="0" rspace="0">]</mo></math></p>
+<p class="note">Veldu leið til að ákveða hvar fleygboginn er fyrir neðan ásinn. Báðar gefa sama svar.</p>
+<details class="leid"><summary>Leið 1: Prófunargildi á hverju bili</summary>
+<table class="steps"><tbody>
+<tr><td><span class="tline"><math xmlns="http://www.w3.org/1998/Math/MathML"><mi>x</mi><mo>=</mo><mo form="prefix" lspace="0" rspace="0">−</mo><mn>3</mn></math> gefur <math xmlns="http://www.w3.org/1998/Math/MathML"><mo stretchy="false" lspace="0" rspace="0">(</mo><mo form="prefix" lspace="0" rspace="0">−</mo><mn>1</mn><mo stretchy="false" lspace="0" rspace="0">)</mo><mo stretchy="false" lspace="0" rspace="0">(</mo><mo form="prefix" lspace="0" rspace="0">−</mo><mn>4</mn><mo stretchy="false" lspace="0" rspace="0">)</mo><mo>=</mo><mn>4</mn><mo>&gt;</mo><mn>0</mn></math></span><span class="tline"><math xmlns="http://www.w3.org/1998/Math/MathML"><mi>x</mi><mo>=</mo><mn>0</mn></math> gefur <math xmlns="http://www.w3.org/1998/Math/MathML"><mo stretchy="false" lspace="0" rspace="0">(</mo><mn>2</mn><mo stretchy="false" lspace="0" rspace="0">)</mo><mo stretchy="false" lspace="0" rspace="0">(</mo><mo form="prefix" lspace="0" rspace="0">−</mo><mn>1</mn><mo stretchy="false" lspace="0" rspace="0">)</mo><mo>=</mo><mo form="prefix" lspace="0" rspace="0">−</mo><mn>2</mn><mo>&lt;</mo><mn>0</mn></math></span><span class="tline"><math xmlns="http://www.w3.org/1998/Math/MathML"><mi>x</mi><mo>=</mo><mn>2</mn></math> gefur <math xmlns="http://www.w3.org/1998/Math/MathML"><mo stretchy="false" lspace="0" rspace="0">(</mo><mn>4</mn><mo stretchy="false" lspace="0" rspace="0">)</mo><mo stretchy="false" lspace="0" rspace="0">(</mo><mn>1</mn><mo stretchy="false" lspace="0" rspace="0">)</mo><mo>=</mo><mn>4</mn><mo>&gt;</mo><mn>0</mn></math></span></td><td>Eitt prófunargildi á hverju bili. Formerkið breytist aðeins í núllstöð. Neikvætt á miðbilinu.</td></tr>
+<tr><td><math xmlns="http://www.w3.org/1998/Math/MathML"><mo form="prefix" lspace="0" rspace="0">−</mo><mn>2</mn><mo>≤</mo><mi>x</mi><mo>≤</mo><mn>1</mn></math></td><td>Með <math xmlns="http://www.w3.org/1998/Math/MathML"><mo>≤</mo></math> eru núllstöðvarnar með.</td></tr>
+<tr><td><span class="tline">Prófun með <math xmlns="http://www.w3.org/1998/Math/MathML"><mi>x</mi><mo>=</mo><mn>0</mn></math>:</span><span class="tline"><math xmlns="http://www.w3.org/1998/Math/MathML"><msup><mn>0</mn><mn>2</mn></msup><mo>+</mo><mn>0</mn><mo>=</mo><mn>0</mn><mo>≤</mo><mn>2</mn></math> ✓</span></td><td>Gildi úr lausninni.</td></tr>
+</tbody></table></details>
+<details class="leid"><summary>Leið 2: Opnun fleygbogans</summary>
+<table class="steps"><tbody>
+<tr><td><math xmlns="http://www.w3.org/1998/Math/MathML"><mi>a</mi><mo>=</mo><mn>1</mn><mo>&gt;</mo><mn>0</mn></math></td><td>Fleygboginn opnast upp, svo hann er fyrir neðan ásinn á milli núllstöðvanna. Sjá graf.</td></tr>
+<tr><td><math xmlns="http://www.w3.org/1998/Math/MathML"><mo form="prefix" lspace="0" rspace="0">−</mo><mn>2</mn><mo>≤</mo><mi>x</mi><mo>≤</mo><mn>1</mn></math></td><td>Með <math xmlns="http://www.w3.org/1998/Math/MathML"><mo>≤</mo></math> eru núllstöðvarnar með.</td></tr>
+<tr><td><span class="tline">Prófun með <math xmlns="http://www.w3.org/1998/Math/MathML"><mi>x</mi><mo>=</mo><mn>0</mn></math>:</span><span class="tline"><math xmlns="http://www.w3.org/1998/Math/MathML"><msup><mn>0</mn><mn>2</mn></msup><mo>+</mo><mn>0</mn><mo>=</mo><mn>0</mn><mo>≤</mo><mn>2</mn></math> ✓</span></td><td>Gildi úr lausninni.</td></tr>
+</tbody></table></details>
+<p class="answerbox">Lausn: <math xmlns="http://www.w3.org/1998/Math/MathML"><mo form="prefix" lspace="0" rspace="0">−</mo><mn>2</mn><mo>≤</mo><mi>x</mi><mo>≤</mo><mn>1</mn></math></p>
 </div>
 <div><svg id="ts1Graph" class="plot" viewBox="0 0 460 360" role="img" aria-label="Fleygboginn y = x í öðru veldi plús x mínus 2. Hlutinn milli x = −2 og x = 1 er fyrir neðan x-ásinn og bilið frá −2 til 1 er merkt á x-ásnum með fylltum endapunktum."></svg></div>
 </div>
@@ -595,7 +609,7 @@ html[data-theme=dark] .save-warn{background:#33281a;border-color:#d39b55}}
 <tr><td><math xmlns="http://www.w3.org/1998/Math/MathML"><mo stretchy="false" lspace="0" rspace="0">(</mo><mi>x</mi><mo>−</mo><mn>1</mn><mo stretchy="false" lspace="0" rspace="0">)</mo><mo stretchy="false" lspace="0" rspace="0">(</mo><mi>x</mi><mo>−</mo><mn>4</mn><mo stretchy="false" lspace="0" rspace="0">)</mo><mo>&lt;</mo><mn>0</mn></math></td><td>Núllstöðvarnar 1 og 4 eru x-hnit skurðpunktanna.</td></tr>
 <tr><td><math xmlns="http://www.w3.org/1998/Math/MathML"><mn>1</mn><mo>&lt;</mo><mi>x</mi><mo>&lt;</mo><mn>4</mn></math></td><td>Neikvætt milli núllstöðva, því <math xmlns="http://www.w3.org/1998/Math/MathML"><mi>a</mi><mo>&gt;</mo><mn>0</mn></math>. Með <math xmlns="http://www.w3.org/1998/Math/MathML"><mo>&lt;</mo></math> eru endapunktar ekki með.</td></tr>
 </tbody></table>
-<p class="answerbox">Lausn: <math xmlns="http://www.w3.org/1998/Math/MathML"><mo stretchy="false" lspace="0" rspace="0">(</mo><mn>1</mn><mo separator="true" lspace="0" rspace="0.35em">,</mo><mn>4</mn><mo stretchy="false" lspace="0" rspace="0">)</mo></math>. Fleygboginn liggur fyrir neðan línuna þegar <math xmlns="http://www.w3.org/1998/Math/MathML"><mn>1</mn><mo>&lt;</mo><mi>x</mi><mo>&lt;</mo><mn>4</mn></math>.</p>
+<p class="answerbox">Lausn: <math xmlns="http://www.w3.org/1998/Math/MathML"><mn>1</mn><mo>&lt;</mo><mi>x</mi><mo>&lt;</mo><mn>4</mn></math>. Á þessu bili liggur fleygboginn fyrir neðan línuna.</p>
 </div>
 <div><svg id="ts2Graph" class="plot" viewBox="0 0 460 360" role="img" aria-label="Fleygboginn y = x í öðru veldi mínus 4x plús 3 og línan y = x mínus 1. Milli skurðpunktanna (1, 0) og (4, 3) liggur fleygboginn fyrir neðan línuna. Bilið frá 1 til 4 er merkt á x-ásnum með opnum endapunktum."></svg></div>
 </div>
@@ -606,17 +620,16 @@ html[data-theme=dark] .save-warn{background:#33281a;border-color:#d39b55}}
 <h2>Neikvæður fremsti stuðull</h2>
 <p>Leystu ójöfnuna <math xmlns="http://www.w3.org/1998/Math/MathML"><mo form="prefix" lspace="0" rspace="0">−</mo><msup><mi>x</mi><mn>2</mn></msup><mo>+</mo><mn>5</mn><mi>x</mi><mo>−</mo><mn>4</mn><mo>≥</mo><mn>0</mn></math>.</p>
 <table class="steps"><tbody>
-<tr><td><math xmlns="http://www.w3.org/1998/Math/MathML"><mo form="prefix" lspace="0" rspace="0">−</mo><msup><mi>x</mi><mn>2</mn></msup><mo>+</mo><mn>5</mn><mi>x</mi><mo>−</mo><mn>4</mn><mo>=</mo><mn>0</mn></math></td><td>Hægri hliðin er þegar 0. Byrjum á að finna núllstöðvarnar.</td></tr>
-<tr><td><math xmlns="http://www.w3.org/1998/Math/MathML"><msup><mi>x</mi><mn>2</mn></msup><mo>−</mo><mn>5</mn><mi>x</mi><mo>+</mo><mn>4</mn><mo>=</mo><mn>0</mn></math></td><td>Margfaldað með −1. Þetta er <em>jafna</em>, svo ekkert merki snýst við.</td></tr>
-<tr><td><math xmlns="http://www.w3.org/1998/Math/MathML"><mo stretchy="false" lspace="0" rspace="0">(</mo><mi>x</mi><mo>−</mo><mn>1</mn><mo stretchy="false" lspace="0" rspace="0">)</mo><mo stretchy="false" lspace="0" rspace="0">(</mo><mi>x</mi><mo>−</mo><mn>4</mn><mo stretchy="false" lspace="0" rspace="0">)</mo><mo>=</mo><mn>0</mn></math></td><td>Þáttun: <math xmlns="http://www.w3.org/1998/Math/MathML"><mo stretchy="false" lspace="0" rspace="0">(</mo><mo form="prefix" lspace="0" rspace="0">−</mo><mn>1</mn><mo stretchy="false" lspace="0" rspace="0">)</mo><mo>·</mo><mo stretchy="false" lspace="0" rspace="0">(</mo><mo form="prefix" lspace="0" rspace="0">−</mo><mn>4</mn><mo stretchy="false" lspace="0" rspace="0">)</mo><mo>=</mo><mn>4</mn></math> og <math xmlns="http://www.w3.org/1998/Math/MathML"><mo stretchy="false" lspace="0" rspace="0">(</mo><mo form="prefix" lspace="0" rspace="0">−</mo><mn>1</mn><mo stretchy="false" lspace="0" rspace="0">)</mo><mo>+</mo><mo stretchy="false" lspace="0" rspace="0">(</mo><mo form="prefix" lspace="0" rspace="0">−</mo><mn>4</mn><mo stretchy="false" lspace="0" rspace="0">)</mo><mo>=</mo><mo form="prefix" lspace="0" rspace="0">−</mo><mn>5</mn></math>.</td></tr>
-<tr><td><math xmlns="http://www.w3.org/1998/Math/MathML"><mi>x</mi><mo>=</mo><mn>1</mn><mtext>&#160;eða&#160;</mtext><mi>x</mi><mo>=</mo><mn>4</mn></math></td><td>Núllstöðvarnar skipta talnalínunni í þrjú bil.</td></tr>
+<tr><td><math xmlns="http://www.w3.org/1998/Math/MathML"><mo form="prefix" lspace="0" rspace="0">−</mo><msup><mi>x</mi><mn>2</mn></msup><mo>+</mo><mn>5</mn><mi>x</mi><mo>−</mo><mn>4</mn><mo>≥</mo><mn>0</mn></math></td><td>Hægri hliðin er þegar 0. Byrjum á að finna núllstöðvarnar.</td></tr>
+<tr><td><math xmlns="http://www.w3.org/1998/Math/MathML"><mo form="prefix" lspace="0" rspace="0">−</mo><msup><mi>x</mi><mn>2</mn></msup><mo>+</mo><mn>5</mn><mi>x</mi><mo>−</mo><mn>4</mn><mo>=</mo><mo form="prefix" lspace="0" rspace="0">−</mo><mo stretchy="false" lspace="0" rspace="0">(</mo><msup><mi>x</mi><mn>2</mn></msup><mo>−</mo><mn>5</mn><mi>x</mi><mo>+</mo><mn>4</mn><mo stretchy="false" lspace="0" rspace="0">)</mo><mo>=</mo><mo form="prefix" lspace="0" rspace="0">−</mo><mo stretchy="false" lspace="0" rspace="0">(</mo><mi>x</mi><mo>−</mo><mn>1</mn><mo stretchy="false" lspace="0" rspace="0">)</mo><mo stretchy="false" lspace="0" rspace="0">(</mo><mi>x</mi><mo>−</mo><mn>4</mn><mo stretchy="false" lspace="0" rspace="0">)</mo></math></td><td>Tökum −1 út fyrir sviga og þáttum það sem eftir er.</td></tr>
+<tr><td><math xmlns="http://www.w3.org/1998/Math/MathML"><mi>x</mi><mo>=</mo><mn>1</mn><mtext>&#160;eða&#160;</mtext><mi>x</mi><mo>=</mo><mn>4</mn></math></td><td>Núllstöðvar.</td></tr>
 </tbody></table>
 <p><strong>Kláraðu dæmið í stílabókinni</strong> áður en þú opnar framhaldið. Skoðaðu upprunalegu ójöfnuna <math xmlns="http://www.w3.org/1998/Math/MathML"><mo form="prefix" lspace="0" rspace="0">−</mo><msup><mi>x</mi><mn>2</mn></msup><mo>+</mo><mn>5</mn><mi>x</mi><mo>−</mo><mn>4</mn><mo>≥</mo><mn>0</mn></math>: Hvernig opnast fleygboginn <math xmlns="http://www.w3.org/1998/Math/MathML"><mi>y</mi><mo>=</mo><mo form="prefix" lspace="0" rspace="0">−</mo><msup><mi>x</mi><mn>2</mn></msup><mo>+</mo><mn>5</mn><mi>x</mi><mo>−</mo><mn>4</mn></math>? Á hvaða bili er <math xmlns="http://www.w3.org/1998/Math/MathML"><mi>y</mi><mo>≥</mo><mn>0</mn></math>?</p>
 <details><summary>Sýna næsta skref</summary>
 <p><math xmlns="http://www.w3.org/1998/Math/MathML"><mi>a</mi><mo>=</mo><mo form="prefix" lspace="0" rspace="0">−</mo><mn>1</mn><mo>&lt;</mo><mn>0</mn></math>, svo fleygboginn opnast niður. Hann er fyrir ofan x-ásinn milli núllstöðvanna.</p></details>
 <details><summary>Sýna lokasvar og prófun</summary>
 <p>Merkið er <math xmlns="http://www.w3.org/1998/Math/MathML"><mo>≥</mo></math>, svo núllstöðvarnar eru með.</p><p>Prófun með <math xmlns="http://www.w3.org/1998/Math/MathML"><mi>x</mi><mo>=</mo><mn>2</mn></math>: <math xmlns="http://www.w3.org/1998/Math/MathML"><mo form="prefix" lspace="0" rspace="0">−</mo><mn>4</mn><mo>+</mo><mn>10</mn><mo>−</mo><mn>4</mn><mo>=</mo><mn>2</mn><mo>≥</mo><mn>0</mn></math> ✓</p>
-<p class="answerbox">Lausn: <math xmlns="http://www.w3.org/1998/Math/MathML"><mo stretchy="false" lspace="0" rspace="0">[</mo><mn>1</mn><mo separator="true" lspace="0" rspace="0.35em">,</mo><mn>4</mn><mo stretchy="false" lspace="0" rspace="0">]</mo></math></p></details>
+<p class="answerbox">Lausn: <math xmlns="http://www.w3.org/1998/Math/MathML"><mn>1</mn><mo>≤</mo><mi>x</mi><mo>≤</mo><mn>4</mn></math></p></details>
 </div>
 
 <div class="panel" id="t-tol">
@@ -640,8 +653,8 @@ html[data-theme=dark] .save-warn{background:#33281a;border-color:#d39b55}}
 <div class="choice-col"><button type="button" data-val="a"><math xmlns="http://www.w3.org/1998/Math/MathML"><mi>c</mi><mo>=</mo><mo form="prefix" lspace="0" rspace="0">−</mo><mn>3</mn></math></button><button type="button" data-val="b"><math xmlns="http://www.w3.org/1998/Math/MathML"><mi>c</mi><mo>=</mo><mn>0</mn></math></button><button type="button" data-val="c"><math xmlns="http://www.w3.org/1998/Math/MathML"><mi>c</mi><mo>=</mo><mn>1</mn></math></button><button type="button" data-val="d"><math xmlns="http://www.w3.org/1998/Math/MathML"><mi>c</mi><mo>=</mo><mn>2</mn></math></button></div>
 <div class="feedback" role="status" aria-live="polite"></div>
 <template data-for="c">Rétt. Þá er <math xmlns="http://www.w3.org/1998/Math/MathML"><mi>d</mi><mo>=</mo><mn>4</mn><mo>−</mo><mn>4</mn><mi>c</mi><mo>=</mo><mn>0</mn></math> og <math xmlns="http://www.w3.org/1998/Math/MathML"><msup><mi>x</mi><mn>2</mn></msup><mo>−</mo><mn>2</mn><mi>x</mi><mo>+</mo><mn>1</mn><mo>=</mo><msup><mrow><mo stretchy="false" lspace="0" rspace="0">(</mo><mi>x</mi><mo>−</mo><mn>1</mn><mo stretchy="false" lspace="0" rspace="0">)</mo></mrow><mn>2</mn></msup></math>. Fleygboginn snertir ásinn aðeins í <math xmlns="http://www.w3.org/1998/Math/MathML"><mi>x</mi><mo>=</mo><mn>1</mn></math>.</template>
-<template data-for="a">Þá er <math xmlns="http://www.w3.org/1998/Math/MathML"><mi>d</mi><mo>=</mo><mn>16</mn><mo>&gt;</mo><mn>0</mn></math> og fleygboginn er fyrir neðan ásinn á heilu bili, <math xmlns="http://www.w3.org/1998/Math/MathML"><mo stretchy="false" lspace="0" rspace="0">[</mo><mo form="prefix" lspace="0" rspace="0">−</mo><mn>1</mn><mo separator="true" lspace="0" rspace="0.35em">,</mo><mn>3</mn><mo stretchy="false" lspace="0" rspace="0">]</mo></math>.</template>
-<template data-for="b">Þá er <math xmlns="http://www.w3.org/1998/Math/MathML"><mi>d</mi><mo>=</mo><mn>4</mn><mo>&gt;</mo><mn>0</mn></math> og lausnin er heilt bil, <math xmlns="http://www.w3.org/1998/Math/MathML"><mo stretchy="false" lspace="0" rspace="0">[</mo><mn>0</mn><mo separator="true" lspace="0" rspace="0.35em">,</mo><mn>2</mn><mo stretchy="false" lspace="0" rspace="0">]</mo></math>.</template>
+<template data-for="a">Þá er <math xmlns="http://www.w3.org/1998/Math/MathML"><mi>d</mi><mo>=</mo><mn>16</mn><mo>&gt;</mo><mn>0</mn></math> og fleygboginn er fyrir neðan ásinn á heilu bili, <math xmlns="http://www.w3.org/1998/Math/MathML"><mo form="prefix" lspace="0" rspace="0">−</mo><mn>1</mn><mo>≤</mo><mi>x</mi><mo>≤</mo><mn>3</mn></math>.</template>
+<template data-for="b">Þá er <math xmlns="http://www.w3.org/1998/Math/MathML"><mi>d</mi><mo>=</mo><mn>4</mn><mo>&gt;</mo><mn>0</mn></math> og lausnin er heilt bil, <math xmlns="http://www.w3.org/1998/Math/MathML"><mn>0</mn><mo>≤</mo><mi>x</mi><mo>≤</mo><mn>2</mn></math>.</template>
 <template data-for="d">Þá er <math xmlns="http://www.w3.org/1998/Math/MathML"><mi>d</mi><mo>=</mo><mo form="prefix" lspace="0" rspace="0">−</mo><mn>4</mn><mo>&lt;</mo><mn>0</mn></math> og fleygboginn er alltaf fyrir ofan ásinn. Engin lausn.</template>
 </fieldset>
 <fieldset class="q" data-q="q16" data-correct="b"><legend>Fyrir hvaða c hefur <math xmlns="http://www.w3.org/1998/Math/MathML"><msup><mi>x</mi><mn>2</mn></msup><mo>−</mo><mn>2</mn><mi>x</mi><mo>+</mo><mi>c</mi><mo>&lt;</mo><mn>0</mn></math> enga lausn?</legend>
@@ -650,7 +663,7 @@ html[data-theme=dark] .save-warn{background:#33281a;border-color:#d39b55}}
 <template data-for="b">Rétt. Ef <math xmlns="http://www.w3.org/1998/Math/MathML"><mi>c</mi><mo>&gt;</mo><mn>1</mn></math> er <math xmlns="http://www.w3.org/1998/Math/MathML"><mi>d</mi><mo>&lt;</mo><mn>0</mn></math> og fleygboginn alltaf fyrir ofan ásinn. Ef <math xmlns="http://www.w3.org/1998/Math/MathML"><mi>c</mi><mo>=</mo><mn>1</mn></math> snertir hann ásinn, en <math xmlns="http://www.w3.org/1998/Math/MathML"><msup><mrow><mo stretchy="false" lspace="0" rspace="0">(</mo><mi>x</mi><mo>−</mo><mn>1</mn><mo stretchy="false" lspace="0" rspace="0">)</mo></mrow><mn>2</mn></msup><mo>&lt;</mo><mn>0</mn></math> er aldrei satt.</template>
 <template data-for="a">Prófaðu líka <math xmlns="http://www.w3.org/1998/Math/MathML"><mi>c</mi><mo>=</mo><mn>2</mn></math> og <math xmlns="http://www.w3.org/1998/Math/MathML"><mi>c</mi><mo>=</mo><mn>3</mn></math> í tólinu. Hefur ójafnan þá lausn?</template>
 <template data-for="c">Prófaðu <math xmlns="http://www.w3.org/1998/Math/MathML"><mi>c</mi><mo>=</mo><mn>1</mn></math>: <math xmlns="http://www.w3.org/1998/Math/MathML"><msup><mrow><mo stretchy="false" lspace="0" rspace="0">(</mo><mi>x</mi><mo>−</mo><mn>1</mn><mo stretchy="false" lspace="0" rspace="0">)</mo></mrow><mn>2</mn></msup><mo>&lt;</mo><mn>0</mn></math>. Er til x sem uppfyllir það?</template>
-<template data-for="d">Prófaðu <math xmlns="http://www.w3.org/1998/Math/MathML"><mi>c</mi><mo>=</mo><mn>0</mn></math>: þá er lausnin <math xmlns="http://www.w3.org/1998/Math/MathML"><mo stretchy="false" lspace="0" rspace="0">(</mo><mn>0</mn><mo separator="true" lspace="0" rspace="0.35em">,</mo><mn>2</mn><mo stretchy="false" lspace="0" rspace="0">)</mo></math>.</template>
+<template data-for="d">Prófaðu <math xmlns="http://www.w3.org/1998/Math/MathML"><mi>c</mi><mo>=</mo><mn>0</mn></math>: þá er lausnin <math xmlns="http://www.w3.org/1998/Math/MathML"><mn>0</mn><mo>&lt;</mo><mi>x</mi><mo>&lt;</mo><mn>2</mn></math>.</template>
 </fieldset>
 <fieldset class="q" data-q="q17" data-correct="a"><legend>Þegar <math xmlns="http://www.w3.org/1998/Math/MathML"><mi>c</mi><mo>=</mo><mn>3</mn></math>, hver er lausn <math xmlns="http://www.w3.org/1998/Math/MathML"><msup><mi>x</mi><mn>2</mn></msup><mo>−</mo><mn>2</mn><mi>x</mi><mo>+</mo><mi>c</mi><mo>&gt;</mo><mn>0</mn></math>?</legend>
 <div class="choice-col"><button type="button" data-val="a">Allar rauntölur</button><button type="button" data-val="b">Engin lausn</button><button type="button" data-val="c"><math xmlns="http://www.w3.org/1998/Math/MathML"><mi>x</mi><mo>&gt;</mo><mn>1</mn></math></button><button type="button" data-val="d">Aðeins <math xmlns="http://www.w3.org/1998/Math/MathML"><mi>x</mi><mo>=</mo><mn>1</mn></math></button></div>
@@ -670,7 +683,7 @@ html[data-theme=dark] .save-warn{background:#33281a;border-color:#d39b55}}
 <tr><td data-l="Ójafna"><math xmlns="http://www.w3.org/1998/Math/MathML"><msup><mi>x</mi><mn>2</mn></msup><mo>+</mo><mn>1</mn><mo>&gt;</mo><mn>0</mn></math></td><td data-l="Aðgreinir"><math xmlns="http://www.w3.org/1998/Math/MathML"><mi>d</mi><mo>=</mo><mo form="prefix" lspace="0" rspace="0">−</mo><mn>4</mn></math></td><td data-l="Lausn">Allar rauntölur</td><td data-l="Hvers vegna?">Fleygboginn opnast upp og nær aldrei niður að ásnum. Hann er alltaf fyrir ofan.</td></tr>
 <tr><td data-l="Ójafna"><math xmlns="http://www.w3.org/1998/Math/MathML"><msup><mi>x</mi><mn>2</mn></msup><mo>+</mo><mn>1</mn><mo>&lt;</mo><mn>0</mn></math></td><td data-l="Aðgreinir"><math xmlns="http://www.w3.org/1998/Math/MathML"><mi>d</mi><mo>=</mo><mo form="prefix" lspace="0" rspace="0">−</mo><mn>4</mn></math></td><td data-l="Lausn">Engin lausn</td><td data-l="Hvers vegna?">Fleygboginn er aldrei fyrir neðan ásinn.</td></tr>
 <tr><td data-l="Ójafna"><math xmlns="http://www.w3.org/1998/Math/MathML"><msup><mi>x</mi><mn>2</mn></msup><mo>−</mo><mn>4</mn><mi>x</mi><mo>+</mo><mn>4</mn><mo>≤</mo><mn>0</mn></math></td><td data-l="Aðgreinir"><math xmlns="http://www.w3.org/1998/Math/MathML"><mi>d</mi><mo>=</mo><mn>0</mn></math></td><td data-l="Lausn">Aðeins <math xmlns="http://www.w3.org/1998/Math/MathML"><mi>x</mi><mo>=</mo><mn>2</mn></math></td><td data-l="Hvers vegna?"><math xmlns="http://www.w3.org/1998/Math/MathML"><msup><mi>x</mi><mn>2</mn></msup><mo>−</mo><mn>4</mn><mi>x</mi><mo>+</mo><mn>4</mn><mo>=</mo><msup><mrow><mo stretchy="false" lspace="0" rspace="0">(</mo><mi>x</mi><mo>−</mo><mn>2</mn><mo stretchy="false" lspace="0" rspace="0">)</mo></mrow><mn>2</mn></msup><mo>≥</mo><mn>0</mn></math>, og jafnt 0 aðeins þegar <math xmlns="http://www.w3.org/1998/Math/MathML"><mi>x</mi><mo>=</mo><mn>2</mn></math>.</td></tr>
-<tr><td data-l="Ójafna"><math xmlns="http://www.w3.org/1998/Math/MathML"><msup><mi>x</mi><mn>2</mn></msup><mo>−</mo><mn>4</mn><mi>x</mi><mo>+</mo><mn>4</mn><mo>&gt;</mo><mn>0</mn></math></td><td data-l="Aðgreinir"><math xmlns="http://www.w3.org/1998/Math/MathML"><mi>d</mi><mo>=</mo><mn>0</mn></math></td><td data-l="Lausn"><math xmlns="http://www.w3.org/1998/Math/MathML"><mo stretchy="false" lspace="0" rspace="0">(</mo><mo form="prefix" lspace="0" rspace="0">−</mo><mi>∞</mi><mo separator="true" lspace="0" rspace="0.35em">,</mo><mn>2</mn><mo stretchy="false" lspace="0" rspace="0">)</mo><mtext>&#160;eða&#160;</mtext><mo stretchy="false" lspace="0" rspace="0">(</mo><mn>2</mn><mo separator="true" lspace="0" rspace="0.35em">,</mo><mi>∞</mi><mo stretchy="false" lspace="0" rspace="0">)</mo></math></td><td data-l="Hvers vegna?">Jákvætt alls staðar nema í <math xmlns="http://www.w3.org/1998/Math/MathML"><mi>x</mi><mo>=</mo><mn>2</mn></math>.</td></tr>
+<tr><td data-l="Ójafna"><math xmlns="http://www.w3.org/1998/Math/MathML"><msup><mi>x</mi><mn>2</mn></msup><mo>−</mo><mn>4</mn><mi>x</mi><mo>+</mo><mn>4</mn><mo>&gt;</mo><mn>0</mn></math></td><td data-l="Aðgreinir"><math xmlns="http://www.w3.org/1998/Math/MathML"><mi>d</mi><mo>=</mo><mn>0</mn></math></td><td data-l="Lausn"><math xmlns="http://www.w3.org/1998/Math/MathML"><mi>x</mi><mo>&lt;</mo><mn>2</mn><mtext>&#160;eða&#160;</mtext><mi>x</mi><mo>&gt;</mo><mn>2</mn></math></td><td data-l="Hvers vegna?">Jákvætt alls staðar nema í <math xmlns="http://www.w3.org/1998/Math/MathML"><mi>x</mi><mo>=</mo><mn>2</mn></math>.</td></tr>
 </tbody></table></div>
 </div>
 
@@ -678,13 +691,13 @@ html[data-theme=dark] .save-warn{background:#33281a;border-color:#d39b55}}
 <div class="tag">Kannaðu skilninginn</div>
 <h2>Bil og ójöfnur</h2>
 <p class="note">Veldu svar. Þú færð endurgjöf strax.</p>
-<fieldset class="q" data-q="q6" data-correct="a"><legend>Hvernig er <math xmlns="http://www.w3.org/1998/Math/MathML"><mo form="prefix" lspace="0" rspace="0">−</mo><mn>3</mn><mo>≤</mo><mi>x</mi><mo>&lt;</mo><mn>2</mn></math> ritað með bilaskrift?</legend>
-<div class="choice-row"><button type="button" data-val="a"><math xmlns="http://www.w3.org/1998/Math/MathML"><mo stretchy="false" lspace="0" rspace="0">[</mo><mo form="prefix" lspace="0" rspace="0">−</mo><mn>3</mn><mo separator="true" lspace="0" rspace="0.35em">,</mo><mn>2</mn><mo stretchy="false" lspace="0" rspace="0">)</mo></math></button><button type="button" data-val="b"><math xmlns="http://www.w3.org/1998/Math/MathML"><mo stretchy="false" lspace="0" rspace="0">(</mo><mo form="prefix" lspace="0" rspace="0">−</mo><mn>3</mn><mo separator="true" lspace="0" rspace="0.35em">,</mo><mn>2</mn><mo stretchy="false" lspace="0" rspace="0">]</mo></math></button><button type="button" data-val="c"><math xmlns="http://www.w3.org/1998/Math/MathML"><mo stretchy="false" lspace="0" rspace="0">[</mo><mo form="prefix" lspace="0" rspace="0">−</mo><mn>3</mn><mo separator="true" lspace="0" rspace="0.35em">,</mo><mn>2</mn><mo stretchy="false" lspace="0" rspace="0">]</mo></math></button><button type="button" data-val="d"><math xmlns="http://www.w3.org/1998/Math/MathML"><mo stretchy="false" lspace="0" rspace="0">(</mo><mo form="prefix" lspace="0" rspace="0">−</mo><mn>3</mn><mo separator="true" lspace="0" rspace="0.35em">,</mo><mn>2</mn><mo stretchy="false" lspace="0" rspace="0">)</mo></math></button></div>
+<fieldset class="q" data-q="q6" data-correct="a"><legend>Hvernig er <math xmlns="http://www.w3.org/1998/Math/MathML"><mo form="prefix" lspace="0" rspace="0">−</mo><mn>3</mn><mo>≤</mo><mi>x</mi><mo>&lt;</mo><mn>2</mn></math> sýnt á talnalínu?</legend>
+<div class="choice-col"><button type="button" data-val="a">Fylltur punktur við −3, opinn hringur við 2, strik á milli</button><button type="button" data-val="b">Opinn hringur við −3, fylltur punktur við 2, strik á milli</button><button type="button" data-val="c">Fylltir punktar við −3 og 2, strik á milli</button><button type="button" data-val="d">Opnir hringir við −3 og 2, strik á milli</button></div>
 <div class="feedback" role="status" aria-live="polite"></div>
-<template data-for="a">Rétt. <math xmlns="http://www.w3.org/1998/Math/MathML"><mo form="prefix" lspace="0" rspace="0">−</mo><mn>3</mn></math> er með (<math xmlns="http://www.w3.org/1998/Math/MathML"><mo>≤</mo></math>), svo þar er hornklofi. <math xmlns="http://www.w3.org/1998/Math/MathML"><mn>2</mn></math> er ekki með (<math xmlns="http://www.w3.org/1998/Math/MathML"><mo>&lt;</mo></math>), svo þar er svigi.</template>
+<template data-for="a">Rétt. <math xmlns="http://www.w3.org/1998/Math/MathML"><mo form="prefix" lspace="0" rspace="0">−</mo><mn>3</mn></math> er með (<math xmlns="http://www.w3.org/1998/Math/MathML"><mo>≤</mo></math>), svo þar er fylltur punktur. <math xmlns="http://www.w3.org/1998/Math/MathML"><mn>2</mn></math> er ekki með (<math xmlns="http://www.w3.org/1998/Math/MathML"><mo>&lt;</mo></math>), svo þar er opinn hringur.</template>
 <template data-for="b">Þú snerir endapunktunum við. <math xmlns="http://www.w3.org/1998/Math/MathML"><mo form="prefix" lspace="0" rspace="0">−</mo><mn>3</mn></math> er með, því merkið er <math xmlns="http://www.w3.org/1998/Math/MathML"><mo>≤</mo></math>.</template>
-<template data-for="c"><math xmlns="http://www.w3.org/1998/Math/MathML"><mn>2</mn></math> er ekki með, því merkið er <math xmlns="http://www.w3.org/1998/Math/MathML"><mo>&lt;</mo></math>. Notaðu svigann við 2.</template>
-<template data-for="d"><math xmlns="http://www.w3.org/1998/Math/MathML"><mo form="prefix" lspace="0" rspace="0">−</mo><mn>3</mn></math> er með, því merkið er <math xmlns="http://www.w3.org/1998/Math/MathML"><mo>≤</mo></math>. Notaðu hornklofann við −3.</template>
+<template data-for="c"><math xmlns="http://www.w3.org/1998/Math/MathML"><mn>2</mn></math> er ekki með, því merkið er <math xmlns="http://www.w3.org/1998/Math/MathML"><mo>&lt;</mo></math>. Þar á að vera opinn hringur.</template>
+<template data-for="d"><math xmlns="http://www.w3.org/1998/Math/MathML"><mo form="prefix" lspace="0" rspace="0">−</mo><mn>3</mn></math> er með, því merkið er <math xmlns="http://www.w3.org/1998/Math/MathML"><mo>≤</mo></math>. Þar á að vera fylltur punktur.</template>
 </fieldset>
 <fieldset class="q" data-q="q7" data-correct="b"><legend>Fyrir hvaða x er <math xmlns="http://www.w3.org/1998/Math/MathML"><msup><mi>x</mi><mn>2</mn></msup><mo>−</mo><mn>9</mn><mo>&gt;</mo><mn>0</mn></math>?</legend>
 <div class="choice-col"><button type="button" data-val="a"><math xmlns="http://www.w3.org/1998/Math/MathML"><mo form="prefix" lspace="0" rspace="0">−</mo><mn>3</mn><mo>&lt;</mo><mi>x</mi><mo>&lt;</mo><mn>3</mn></math></button><button type="button" data-val="b"><math xmlns="http://www.w3.org/1998/Math/MathML"><mi>x</mi><mo>&lt;</mo><mo form="prefix" lspace="0" rspace="0">−</mo><mn>3</mn><mtext>&#160;eða&#160;</mtext><mi>x</mi><mo>&gt;</mo><mn>3</mn></math></button><button type="button" data-val="c"><math xmlns="http://www.w3.org/1998/Math/MathML"><mi>x</mi><mo>&gt;</mo><mn>3</mn></math></button><button type="button" data-val="d"><math xmlns="http://www.w3.org/1998/Math/MathML"><mi>x</mi><mo>&gt;</mo><mo>±</mo><mn>3</mn></math></button></div>
@@ -705,8 +718,8 @@ html[data-theme=dark] .save-warn{background:#33281a;border-color:#d39b55}}
 <div class="panel">
 <div class="tag">Algeng mistök</div>
 <h2>Varastu þetta</h2>
-<div class="hint"><strong>Að leysa ójöfnuna eins og jöfnu.</strong> Sumir álykta af <math xmlns="http://www.w3.org/1998/Math/MathML"><mo stretchy="false" lspace="0" rspace="0">(</mo><mi>x</mi><mo>−</mo><mn>3</mn><mo stretchy="false" lspace="0" rspace="0">)</mo><mo stretchy="false" lspace="0" rspace="0">(</mo><mi>x</mi><mo>+</mo><mn>2</mn><mo stretchy="false" lspace="0" rspace="0">)</mo><mo>&lt;</mo><mn>0</mn></math> að <math xmlns="http://www.w3.org/1998/Math/MathML"><mi>x</mi><mo>−</mo><mn>3</mn><mo>&lt;</mo><mn>0</mn></math> eða <math xmlns="http://www.w3.org/1998/Math/MathML"><mi>x</mi><mo>+</mo><mn>2</mn><mo>&lt;</mo><mn>0</mn></math>. <em>Hvers vegna er það rangt?</em> Núllþáttareglan gildir aðeins þegar margfeldið er 0. Margfeldi tveggja þátta er neikvætt þegar þættirnir hafa ólík formerki. <em>Rétt:</em> Finndu núllstöðvarnar og ákvarðaðu formerkið á hverju bili. Hér er lausnin <math xmlns="http://www.w3.org/1998/Math/MathML"><mo stretchy="false" lspace="0" rspace="0">(</mo><mo form="prefix" lspace="0" rspace="0">−</mo><mn>2</mn><mo separator="true" lspace="0" rspace="0.35em">,</mo><mn>3</mn><mo stretchy="false" lspace="0" rspace="0">)</mo></math>.</div>
-<div class="hint"><strong><math xmlns="http://www.w3.org/1998/Math/MathML"><msup><mi>x</mi><mn>2</mn></msup><mo>&lt;</mo><mn>9</mn><mo>⇒</mo><mi>x</mi><mo>&lt;</mo><mo>±</mo><mn>3</mn></math>.</strong> <em>Hvers vegna er það rangt?</em> <math xmlns="http://www.w3.org/1998/Math/MathML"><mi>x</mi><mo>=</mo><mo form="prefix" lspace="0" rspace="0">−</mo><mn>5</mn></math> er minna en 3, en <math xmlns="http://www.w3.org/1998/Math/MathML"><mn>25</mn><mo>&lt;</mo><mn>9</mn></math> er ósatt. <em>Rétt:</em> <math xmlns="http://www.w3.org/1998/Math/MathML"><mo form="prefix" lspace="0" rspace="0">−</mo><mn>3</mn><mo>&lt;</mo><mi>x</mi><mo>&lt;</mo><mn>3</mn></math>, þ.e. <math xmlns="http://www.w3.org/1998/Math/MathML"><mo stretchy="false" lspace="0" rspace="0">(</mo><mo form="prefix" lspace="0" rspace="0">−</mo><mn>3</mn><mo separator="true" lspace="0" rspace="0.35em">,</mo><mn>3</mn><mo stretchy="false" lspace="0" rspace="0">)</mo></math>.</div>
+<div class="hint"><strong>Að leysa ójöfnuna eins og jöfnu.</strong> Sumir álykta af <math xmlns="http://www.w3.org/1998/Math/MathML"><mo stretchy="false" lspace="0" rspace="0">(</mo><mi>x</mi><mo>−</mo><mn>3</mn><mo stretchy="false" lspace="0" rspace="0">)</mo><mo stretchy="false" lspace="0" rspace="0">(</mo><mi>x</mi><mo>+</mo><mn>2</mn><mo stretchy="false" lspace="0" rspace="0">)</mo><mo>&lt;</mo><mn>0</mn></math> að <math xmlns="http://www.w3.org/1998/Math/MathML"><mi>x</mi><mo>−</mo><mn>3</mn><mo>&lt;</mo><mn>0</mn></math> eða <math xmlns="http://www.w3.org/1998/Math/MathML"><mi>x</mi><mo>+</mo><mn>2</mn><mo>&lt;</mo><mn>0</mn></math>. <em>Hvers vegna er það rangt?</em> Núllþáttareglan gildir aðeins þegar margfeldið er 0. Margfeldi tveggja þátta er neikvætt þegar þættirnir hafa ólík formerki. <em>Rétt:</em> Finndu núllstöðvarnar og skissaðu fleygbogann. Hann opnast upp og er því fyrir neðan ásinn á milli núllstöðvanna. Lausnin er <math xmlns="http://www.w3.org/1998/Math/MathML"><mo form="prefix" lspace="0" rspace="0">−</mo><mn>2</mn><mo>&lt;</mo><mi>x</mi><mo>&lt;</mo><mn>3</mn></math>.</div>
+<div class="hint"><strong><math xmlns="http://www.w3.org/1998/Math/MathML"><msup><mi>x</mi><mn>2</mn></msup><mo>&lt;</mo><mn>9</mn><mo>⇒</mo><mi>x</mi><mo>&lt;</mo><mo>±</mo><mn>3</mn></math>.</strong> <em>Hvers vegna er það rangt?</em> <math xmlns="http://www.w3.org/1998/Math/MathML"><mi>x</mi><mo>=</mo><mo form="prefix" lspace="0" rspace="0">−</mo><mn>5</mn></math> er minna en 3, en <math xmlns="http://www.w3.org/1998/Math/MathML"><mn>25</mn><mo>&lt;</mo><mn>9</mn></math> er ósatt. <em>Rétt:</em> <math xmlns="http://www.w3.org/1998/Math/MathML"><mo form="prefix" lspace="0" rspace="0">−</mo><mn>3</mn><mo>&lt;</mo><mi>x</mi><mo>&lt;</mo><mn>3</mn></math>.</div>
 </div>
 
 <div class="panel">
@@ -714,8 +727,8 @@ html[data-theme=dark] .save-warn{background:#33281a;border-color:#d39b55}}
 <h2>Mundu</h2>
 <div class="defbox"><ul>
 <li>Ójafnan <math xmlns="http://www.w3.org/1998/Math/MathML"><mi>a</mi><msup><mi>x</mi><mn>2</mn></msup><mo>+</mo><mi>b</mi><mi>x</mi><mo>+</mo><mi>c</mi><mo>&gt;</mo><mn>0</mn></math> spyr hvar fleygboginn er fyrir ofan x-ásinn. Með <math xmlns="http://www.w3.org/1998/Math/MathML"><mo>&lt;</mo><mn>0</mn></math> er spurt hvar hann er fyrir neðan.</li>
-<li>Núllstöðvarnar skipta talnalínunni í bil, og á hverju bili er formerkið það sama. Prófaðu eitt gildi eða notaðu lögun fleygbogans.</li>
-<li>Ritaðu lausnamengið með bilaskrift. Svigi: endapunktur ekki með. Hornklofi: með. Við <math xmlns="http://www.w3.org/1998/Math/MathML"><mi>∞</mi></math> er alltaf svigi.</li>
+<li>Finndu núllstöðvarnar og skissaðu fleygbogann. Ef <math xmlns="http://www.w3.org/1998/Math/MathML"><mi>a</mi><mo>&gt;</mo><mn>0</mn></math> er hann fyrir neðan ásinn á milli núllstöðvanna. Ef <math xmlns="http://www.w3.org/1998/Math/MathML"><mi>a</mi><mo>&lt;</mo><mn>0</mn></math> er hann fyrir ofan ásinn á milli þeirra.</li>
+<li>Skrifaðu lausnina sem ójöfnu eða teiknaðu hana á talnalínu. Með <math xmlns="http://www.w3.org/1998/Math/MathML"><mo>≤</mo></math> og <math xmlns="http://www.w3.org/1998/Math/MathML"><mo>≥</mo></math> eru endapunktarnir með (fylltur punktur), með <math xmlns="http://www.w3.org/1998/Math/MathML"><mo>&lt;</mo></math> og <math xmlns="http://www.w3.org/1998/Math/MathML"><mo>&gt;</mo></math> ekki (opinn hringur).</li>
 </ul></div>
 </div>
 
@@ -727,16 +740,16 @@ html[data-theme=dark] .save-warn{background:#33281a;border-color:#d39b55}}
 <p>Reiknaðu a.m.k. appelsínugulu dæmin (kjarnadæmi). Bláu dæmin eru aukadæmi. Stuðningurinn minnkar eftir því sem neðar dregur. Lausnirnar sýna aðeins lokasvör, svo þú getir borið þau saman við þína útreikninga.</p>
 </div>
 <div class="progress-wrap" aria-live="polite">
-<p><strong>Æfð kjarnadæmi:</strong> <span class="coreDone">0</span> af <span class="coreTotal">7</span> · <strong>Æfð aukadæmi:</strong> <span class="extraDone">0</span> af <span class="extraTotal">3</span></p>
+<p><strong>Æfð kjarnadæmi:</strong> <span class="coreDone">0</span> af <span class="coreTotal">4</span> · <strong>Æfð aukadæmi:</strong> <span class="extraDone">0</span> af <span class="extraTotal">4</span></p>
 <div class="progress-track" aria-hidden="true"><div class="coreBar"></div></div>
 <p class="note progressMsg"></p>
 </div>
-<p><strong>Í dæmum 2.1–2.5:</strong> Leystu ójöfnuna og ritaðu lausnamengið með bilaskrift.</p>
+<p><strong>Í dæmum 2.1–2.5:</strong> Leystu ójöfnuna. Skrifaðu lausnina sem ójöfnu eða sýndu hana á talnalínu.</p>
 <article class="ex core-ex" id="ex-2-1" data-ex="2.1" data-kind="core" data-hints="2">
 <div class="ex-head"><span class="core">2.1</span><span class="ex-kind">Kjarnadæmi</span></div>
 <p><math xmlns="http://www.w3.org/1998/Math/MathML"><msup><mi>x</mi><mn>2</mn></msup><mo>−</mo><mn>4</mn><mi>x</mi><mo>+</mo><mn>3</mn><mo>&lt;</mo><mn>0</mn></math></p>
 <div class="actions"><a class="exlink exbtn" href="#t-s1">Sýnidæmi 1</a><button type="button" class="sol-btn" aria-expanded="false">Lausn</button></div>
-<div class="answerbox sol" hidden><strong>Lokasvar:</strong> <math xmlns="http://www.w3.org/1998/Math/MathML"><mo stretchy="false" lspace="0" rspace="0">(</mo><mn>1</mn><mo separator="true" lspace="0" rspace="0.35em">,</mo><mn>3</mn><mo stretchy="false" lspace="0" rspace="0">)</mo></math></div>
+<div class="answerbox sol" hidden><strong>Lokasvar:</strong> <math xmlns="http://www.w3.org/1998/Math/MathML"><mn>1</mn><mo>&lt;</mo><mi>x</mi><mo>&lt;</mo><mn>3</mn></math></div>
 <label class="done"><input type="checkbox" data-done="2.1"> Ég hef æft dæmið</label>
 </article>
 <article class="ex core-ex" id="ex-2-2" data-ex="2.2" data-kind="core" data-hints="2">
@@ -744,23 +757,15 @@ html[data-theme=dark] .save-warn{background:#33281a;border-color:#d39b55}}
 <p><math xmlns="http://www.w3.org/1998/Math/MathML"><msup><mi>x</mi><mn>2</mn></msup><mo>+</mo><mn>2</mn><mi>x</mi><mo>−</mo><mn>8</mn><mo>≥</mo><mn>0</mn></math></p>
 <div class="actions"><button type="button" class="hint-btn" aria-controls="ex-2-2">Vísbending 1</button><button type="button" class="sol-btn" aria-expanded="false">Lausn</button></div>
 <div class="hint" data-level="1" hidden><strong>Vísbending 1:</strong> Þáttaðu. Leitaðu að tveimur tölum með margfeldið <math xmlns="http://www.w3.org/1998/Math/MathML"><mo form="prefix" lspace="0" rspace="0">−</mo><mn>8</mn></math> og summuna <math xmlns="http://www.w3.org/1998/Math/MathML"><mn>2</mn></math>.</div><div class="hint" data-level="2" hidden><strong>Vísbending 2:</strong> Núllstöðvarnar eru <math xmlns="http://www.w3.org/1998/Math/MathML"><mo form="prefix" lspace="0" rspace="0">−</mo><mn>4</mn></math> og <math xmlns="http://www.w3.org/1998/Math/MathML"><mn>2</mn></math>, og þær eru með því merkið er <math xmlns="http://www.w3.org/1998/Math/MathML"><mo>≥</mo></math>. Er <math xmlns="http://www.w3.org/1998/Math/MathML"><mi>y</mi><mo>≥</mo><mn>0</mn></math> milli þeirra eða utan við þær?</div>
-<div class="answerbox sol" hidden><strong>Lokasvar:</strong> <math xmlns="http://www.w3.org/1998/Math/MathML"><mo stretchy="false" lspace="0" rspace="0">(</mo><mo form="prefix" lspace="0" rspace="0">−</mo><mi>∞</mi><mo separator="true" lspace="0" rspace="0.35em">,</mo><mo form="prefix" lspace="0" rspace="0">−</mo><mn>4</mn><mo stretchy="false" lspace="0" rspace="0">]</mo><mtext>&#160;eða&#160;</mtext><mo stretchy="false" lspace="0" rspace="0">[</mo><mn>2</mn><mo separator="true" lspace="0" rspace="0.35em">,</mo><mi>∞</mi><mo stretchy="false" lspace="0" rspace="0">)</mo></math></div>
+<div class="answerbox sol" hidden><strong>Lokasvar:</strong> <math xmlns="http://www.w3.org/1998/Math/MathML"><mi>x</mi><mo>≤</mo><mo form="prefix" lspace="0" rspace="0">−</mo><mn>4</mn><mtext>&#160;eða&#160;</mtext><mi>x</mi><mo>≥</mo><mn>2</mn></math></div>
 <label class="done"><input type="checkbox" data-done="2.2"> Ég hef æft dæmið</label>
-</article>
-<article class="ex core-ex" id="ex-2-3" data-ex="2.3" data-kind="core" data-hints="1">
-<div class="ex-head"><span class="core">2.3</span><span class="ex-kind">Kjarnadæmi</span></div>
-<p><math xmlns="http://www.w3.org/1998/Math/MathML"><msup><mi>x</mi><mn>2</mn></msup><mo>−</mo><mn>16</mn><mo>≤</mo><mn>0</mn></math></p>
-<div class="actions"><button type="button" class="hint-btn" aria-controls="ex-2-3">Vísbending</button><button type="button" class="sol-btn" aria-expanded="false">Lausn</button></div>
-<div class="hint" data-level="1" hidden><strong>Vísbending 1:</strong> <math xmlns="http://www.w3.org/1998/Math/MathML"><msup><mi>x</mi><mn>2</mn></msup><mo>−</mo><mn>16</mn><mo>=</mo><mo stretchy="false" lspace="0" rspace="0">(</mo><mi>x</mi><mo>−</mo><mn>4</mn><mo stretchy="false" lspace="0" rspace="0">)</mo><mo stretchy="false" lspace="0" rspace="0">(</mo><mi>x</mi><mo>+</mo><mn>4</mn><mo stretchy="false" lspace="0" rspace="0">)</mo></math>. Varastu að skrifa <math xmlns="http://www.w3.org/1998/Math/MathML"><mi>x</mi><mo>≤</mo><mo>±</mo><mn>4</mn></math>.</div>
-<div class="answerbox sol" hidden><strong>Lokasvar:</strong> <math xmlns="http://www.w3.org/1998/Math/MathML"><mo stretchy="false" lspace="0" rspace="0">[</mo><mo form="prefix" lspace="0" rspace="0">−</mo><mn>4</mn><mo separator="true" lspace="0" rspace="0.35em">,</mo><mn>4</mn><mo stretchy="false" lspace="0" rspace="0">]</mo></math></div>
-<label class="done"><input type="checkbox" data-done="2.3"> Ég hef æft dæmið</label>
 </article>
 <article class="ex core-ex" id="ex-2-4" data-ex="2.4" data-kind="core" data-hints="1">
 <div class="ex-head"><span class="core">2.4</span><span class="ex-kind">Kjarnadæmi</span></div>
 <p><math xmlns="http://www.w3.org/1998/Math/MathML"><mo form="prefix" lspace="0" rspace="0">−</mo><msup><mi>x</mi><mn>2</mn></msup><mo>+</mo><mn>2</mn><mi>x</mi><mo>+</mo><mn>3</mn><mo>&gt;</mo><mn>0</mn></math></p>
 <div class="actions"><button type="button" class="hint-btn" aria-controls="ex-2-4">Vísbending</button><button type="button" class="sol-btn" aria-expanded="false">Lausn</button></div>
 <div class="hint" data-level="1" hidden><strong>Vísbending 1:</strong> Fremsti stuðullinn er neikvæður, svo fleygboginn opnast niður. Hvar er hann þá fyrir ofan ásinn?</div>
-<div class="answerbox sol" hidden><strong>Lokasvar:</strong> <math xmlns="http://www.w3.org/1998/Math/MathML"><mo stretchy="false" lspace="0" rspace="0">(</mo><mo form="prefix" lspace="0" rspace="0">−</mo><mn>1</mn><mo separator="true" lspace="0" rspace="0.35em">,</mo><mn>3</mn><mo stretchy="false" lspace="0" rspace="0">)</mo></math></div>
+<div class="answerbox sol" hidden><strong>Lokasvar:</strong> <math xmlns="http://www.w3.org/1998/Math/MathML"><mo form="prefix" lspace="0" rspace="0">−</mo><mn>1</mn><mo>&lt;</mo><mi>x</mi><mo>&lt;</mo><mn>3</mn></math></div>
 <label class="done"><input type="checkbox" data-done="2.4"> Ég hef æft dæmið</label>
 </article>
 <article class="ex core-ex" id="ex-2-5" data-ex="2.5" data-kind="core" data-hints="1">
@@ -771,26 +776,18 @@ html[data-theme=dark] .save-warn{background:#33281a;border-color:#d39b55}}
 <div class="answerbox sol" hidden><strong>Lokasvar:</strong> Engin lausn. <math xmlns="http://www.w3.org/1998/Math/MathML"><mi>d</mi><mo>=</mo><mn>1</mn><mo>−</mo><mn>4</mn><mo>=</mo><mo form="prefix" lspace="0" rspace="0">−</mo><mn>3</mn><mo>&lt;</mo><mn>0</mn></math> og fleygboginn opnast upp, svo hann er alltaf fyrir ofan ásinn.</div>
 <label class="done"><input type="checkbox" data-done="2.5"> Ég hef æft dæmið</label>
 </article>
-<article class="ex core-ex" id="ex-2-6" data-sd="1" data-ex="2.6" data-kind="core" data-hints="1">
-<div class="ex-head"><span class="core">2.6</span><span class="ex-kind">Kjarnadæmi</span></div>
+<article class="ex extra-ex" id="ex-2-6" data-sd="1" data-ex="2.6" data-kind="extra" data-hints="1">
+<div class="ex-head"><span class="extra">2.6</span><span class="ex-kind">Aukadæmi</span></div>
 <p>Fyrir hvaða x liggur fleygboginn <math xmlns="http://www.w3.org/1998/Math/MathML"><mi>y</mi><mo>=</mo><msup><mi>x</mi><mn>2</mn></msup><mo>−</mo><mn>2</mn><mi>x</mi></math> fyrir ofan línuna <math xmlns="http://www.w3.org/1998/Math/MathML"><mi>y</mi><mo>=</mo><mi>x</mi><mo>+</mo><mn>4</mn></math>?</p>
-<details class="exsd"><summary>Sýnidæmi</summary><div class="sd-body"><p><strong>Líkt dæmi:</strong> Fyrir hvaða x liggur fleygboginn <math xmlns="http://www.w3.org/1998/Math/MathML"><mi>y</mi><mo>=</mo><msup><mi>x</mi><mn>2</mn></msup></math> fyrir ofan línuna <math xmlns="http://www.w3.org/1998/Math/MathML"><mi>y</mi><mo>=</mo><mi>x</mi><mo>+</mo><mn>2</mn></math>?</p><table class="steps"><tbody><tr><td><math xmlns="http://www.w3.org/1998/Math/MathML"><msup><mi>x</mi><mn>2</mn></msup><mo>&gt;</mo><mi>x</mi><mo>+</mo><mn>2</mn></math></td><td>„Fyrir ofan“: stærra y-gildi en línan.</td></tr><tr><td><math xmlns="http://www.w3.org/1998/Math/MathML"><msup><mi>x</mi><mn>2</mn></msup><mo>−</mo><mi>x</mi><mo>−</mo><mn>2</mn><mo>&gt;</mo><mn>0</mn></math></td><td>Allt á vinstri hlið.</td></tr><tr><td><math xmlns="http://www.w3.org/1998/Math/MathML"><mo stretchy="false" lspace="0" rspace="0">(</mo><mi>x</mi><mo>−</mo><mn>2</mn><mo stretchy="false" lspace="0" rspace="0">)</mo><mo stretchy="false" lspace="0" rspace="0">(</mo><mi>x</mi><mo>+</mo><mn>1</mn><mo stretchy="false" lspace="0" rspace="0">)</mo><mo>&gt;</mo><mn>0</mn></math></td><td>Núllstöðvar −1 og 2.</td></tr><tr><td><math xmlns="http://www.w3.org/1998/Math/MathML"><mi>x</mi><mo>&lt;</mo><mo form="prefix" lspace="0" rspace="0">−</mo><mn>1</mn><mtext>&#160;eða&#160;</mtext><mi>x</mi><mo>&gt;</mo><mn>2</mn></math></td><td>a > 0: jákvætt utan við núllstöðvarnar. Endapunktar ekki með.</td></tr></tbody></table><p class="answerbox">Lausn: <math xmlns="http://www.w3.org/1998/Math/MathML"><mo stretchy="false" lspace="0" rspace="0">(</mo><mo form="prefix" lspace="0" rspace="0">−</mo><mi>∞</mi><mo separator="true" lspace="0" rspace="0.35em">,</mo><mo form="prefix" lspace="0" rspace="0">−</mo><mn>1</mn><mo stretchy="false" lspace="0" rspace="0">)</mo><mtext>&#160;eða&#160;</mtext><mo stretchy="false" lspace="0" rspace="0">(</mo><mn>2</mn><mo separator="true" lspace="0" rspace="0.35em">,</mo><mi>∞</mi><mo stretchy="false" lspace="0" rspace="0">)</mo></math></p></div></details>
+<details class="exsd"><summary>Sýnidæmi</summary><div class="sd-body"><p><strong>Líkt dæmi:</strong> Fyrir hvaða x liggur fleygboginn <math xmlns="http://www.w3.org/1998/Math/MathML"><mi>y</mi><mo>=</mo><msup><mi>x</mi><mn>2</mn></msup></math> fyrir ofan línuna <math xmlns="http://www.w3.org/1998/Math/MathML"><mi>y</mi><mo>=</mo><mi>x</mi><mo>+</mo><mn>2</mn></math>?</p><table class="steps"><tbody><tr><td><math xmlns="http://www.w3.org/1998/Math/MathML"><msup><mi>x</mi><mn>2</mn></msup><mo>&gt;</mo><mi>x</mi><mo>+</mo><mn>2</mn></math></td><td>„Fyrir ofan“: stærra y-gildi en línan.</td></tr><tr><td><math xmlns="http://www.w3.org/1998/Math/MathML"><msup><mi>x</mi><mn>2</mn></msup><mo>−</mo><mi>x</mi><mo>−</mo><mn>2</mn><mo>&gt;</mo><mn>0</mn></math></td><td>Allt á vinstri hlið.</td></tr><tr><td><math xmlns="http://www.w3.org/1998/Math/MathML"><mo stretchy="false" lspace="0" rspace="0">(</mo><mi>x</mi><mo>−</mo><mn>2</mn><mo stretchy="false" lspace="0" rspace="0">)</mo><mo stretchy="false" lspace="0" rspace="0">(</mo><mi>x</mi><mo>+</mo><mn>1</mn><mo stretchy="false" lspace="0" rspace="0">)</mo><mo>&gt;</mo><mn>0</mn></math></td><td>Núllstöðvar −1 og 2.</td></tr><tr><td><math xmlns="http://www.w3.org/1998/Math/MathML"><mi>x</mi><mo>&lt;</mo><mo form="prefix" lspace="0" rspace="0">−</mo><mn>1</mn><mtext>&#160;eða&#160;</mtext><mi>x</mi><mo>&gt;</mo><mn>2</mn></math></td><td>a > 0: jákvætt utan við núllstöðvarnar. Endapunktar ekki með.</td></tr></tbody></table><p class="answerbox">Lausn: <math xmlns="http://www.w3.org/1998/Math/MathML"><mi>x</mi><mo>&lt;</mo><mo form="prefix" lspace="0" rspace="0">−</mo><mn>1</mn><mtext>&#160;eða&#160;</mtext><mi>x</mi><mo>&gt;</mo><mn>2</mn></math></p></div></details>
 <label class="done"><input type="checkbox" data-done="2.6"> Ég hef æft dæmið</label>
-</article>
-<article class="ex core-ex" id="ex-2-7" data-ex="2.7" data-kind="core" data-hints="1">
-<div class="ex-head"><span class="core">2.7</span><span class="ex-kind">Kjarnadæmi</span></div>
-<p>Nemandi leysti <math xmlns="http://www.w3.org/1998/Math/MathML"><msup><mi>x</mi><mn>2</mn></msup><mo>≤</mo><mn>25</mn></math> og skrifaði <math xmlns="http://www.w3.org/1998/Math/MathML"><mi>x</mi><mo>≤</mo><mo>±</mo><mn>5</mn></math>. Hvað er athugavert? Finndu rétt lausnamengi.</p>
-<div class="actions"><button type="button" class="hint-btn" aria-controls="ex-2-7">Vísbending</button><button type="button" class="sol-btn" aria-expanded="false">Lausn</button></div>
-<div class="hint" data-level="1" hidden><strong>Vísbending 1:</strong> Prófaðu <math xmlns="http://www.w3.org/1998/Math/MathML"><mi>x</mi><mo>=</mo><mo form="prefix" lspace="0" rspace="0">−</mo><mn>6</mn></math>. Uppfyllir það ójöfnuna? Hvað segir svar nemandans um <math xmlns="http://www.w3.org/1998/Math/MathML"><mi>x</mi><mo>=</mo><mo form="prefix" lspace="0" rspace="0">−</mo><mn>6</mn></math>?</div>
-<div class="answerbox sol" hidden><strong>Lokasvar:</strong> „<math xmlns="http://www.w3.org/1998/Math/MathML"><mi>x</mi><mo>≤</mo><mo>±</mo><mn>5</mn></math>“ hefur enga skýra merkingu og gefur til kynna að t.d. <math xmlns="http://www.w3.org/1998/Math/MathML"><mi>x</mi><mo>=</mo><mo form="prefix" lspace="0" rspace="0">−</mo><mn>6</mn></math> sé lausn, en <math xmlns="http://www.w3.org/1998/Math/MathML"><mn>36</mn><mo>≤</mo><mn>25</mn></math> er ósatt. Rétt lausnamengi er <math xmlns="http://www.w3.org/1998/Math/MathML"><mo stretchy="false" lspace="0" rspace="0">[</mo><mo form="prefix" lspace="0" rspace="0">−</mo><mn>5</mn><mo separator="true" lspace="0" rspace="0.35em">,</mo><mn>5</mn><mo stretchy="false" lspace="0" rspace="0">]</mo></math>.</div>
-<label class="done"><input type="checkbox" data-done="2.7"> Ég hef æft dæmið</label>
 </article>
 <article class="ex extra-ex" id="ex-2-8" data-ex="2.8" data-kind="extra" data-hints="1">
 <div class="ex-head"><span class="extra">2.8</span><span class="ex-kind">Aukadæmi</span></div>
 <p><math xmlns="http://www.w3.org/1998/Math/MathML"><mn>2</mn><msup><mi>x</mi><mn>2</mn></msup><mo>−</mo><mn>5</mn><mi>x</mi><mo>−</mo><mn>3</mn><mo>≤</mo><mn>0</mn></math></p>
 <div class="actions"><button type="button" class="hint-btn" aria-controls="ex-2-8">Vísbending</button><button type="button" class="sol-btn" aria-expanded="false">Lausn</button></div>
 <div class="hint" data-level="1" hidden><strong>Vísbending 1:</strong> Notaðu lausnarformúluna til að finna núllstöðvarnar.</div>
-<div class="answerbox sol" hidden><strong>Lokasvar:</strong> <math xmlns="http://www.w3.org/1998/Math/MathML"><mo stretchy="false" lspace="0" rspace="0">[</mo><mo form="prefix" lspace="0" rspace="0">−</mo><mfrac><mrow><mn>1</mn></mrow><mrow><mn>2</mn></mrow></mfrac><mo separator="true" lspace="0" rspace="0.35em">,</mo><mn>3</mn><mo stretchy="false" lspace="0" rspace="0">]</mo></math></div>
+<div class="answerbox sol" hidden><strong>Lokasvar:</strong> <math xmlns="http://www.w3.org/1998/Math/MathML"><mo form="prefix" lspace="0" rspace="0">−</mo><mfrac><mrow><mn>1</mn></mrow><mrow><mn>2</mn></mrow></mfrac><mo>≤</mo><mi>x</mi><mo>≤</mo><mn>3</mn></math></div>
 <label class="done"><input type="checkbox" data-done="2.8"> Ég hef æft dæmið</label>
 </article>
 <article class="ex extra-ex" id="ex-2-9" data-ex="2.9" data-kind="extra" data-hints="1">
@@ -798,7 +795,7 @@ html[data-theme=dark] .save-warn{background:#33281a;border-color:#d39b55}}
 <p><math xmlns="http://www.w3.org/1998/Math/MathML"><msup><mi>x</mi><mn>2</mn></msup><mo>−</mo><mn>6</mn><mi>x</mi><mo>+</mo><mn>9</mn><mo>&gt;</mo><mn>0</mn></math></p>
 <div class="actions"><button type="button" class="hint-btn" aria-controls="ex-2-9">Vísbending</button><button type="button" class="sol-btn" aria-expanded="false">Lausn</button></div>
 <div class="hint" data-level="1" hidden><strong>Vísbending 1:</strong> <math xmlns="http://www.w3.org/1998/Math/MathML"><msup><mi>x</mi><mn>2</mn></msup><mo>−</mo><mn>6</mn><mi>x</mi><mo>+</mo><mn>9</mn><mo>=</mo><msup><mrow><mo stretchy="false" lspace="0" rspace="0">(</mo><mi>x</mi><mo>−</mo><mn>3</mn><mo stretchy="false" lspace="0" rspace="0">)</mo></mrow><mn>2</mn></msup></math>. Hvenær er ferningur jákvæður?</div>
-<div class="answerbox sol" hidden><strong>Lokasvar:</strong> <math xmlns="http://www.w3.org/1998/Math/MathML"><mo stretchy="false" lspace="0" rspace="0">(</mo><mo form="prefix" lspace="0" rspace="0">−</mo><mi>∞</mi><mo separator="true" lspace="0" rspace="0.35em">,</mo><mn>3</mn><mo stretchy="false" lspace="0" rspace="0">)</mo><mtext>&#160;eða&#160;</mtext><mo stretchy="false" lspace="0" rspace="0">(</mo><mn>3</mn><mo separator="true" lspace="0" rspace="0.35em">,</mo><mi>∞</mi><mo stretchy="false" lspace="0" rspace="0">)</mo></math>, þ.e. öll x nema 3.</div>
+<div class="answerbox sol" hidden><strong>Lokasvar:</strong> <math xmlns="http://www.w3.org/1998/Math/MathML"><mi>x</mi><mo>&lt;</mo><mn>3</mn><mtext>&#160;eða&#160;</mtext><mi>x</mi><mo>&gt;</mo><mn>3</mn></math>, þ.e. öll x nema 3.</div>
 <label class="done"><input type="checkbox" data-done="2.9"> Ég hef æft dæmið</label>
 </article>
 <article class="ex extra-ex" id="ex-2-10" data-ex="2.10" data-kind="extra" data-hints="1">
@@ -824,7 +821,7 @@ html[data-theme=dark] .save-warn{background:#33281a;border-color:#d39b55}}
 <ul class="goals">
 <li>Ég get leyst fyrsta stigs ójöfnu og útskýrt hvers vegna ójöfnumerkið snýst við þegar margfaldað er eða deilt með neikvæðri tölu.</li>
 <li>Ég get einfaldað ójöfnu og ákveðið hvort hún er af fyrsta eða öðru stigi áður en ég vel aðferð.</li>
-<li>Ég get ritað lausnamengið með bilaskrift og prófað það með prófunargildi.</li>
+<li>Ég get skrifað lausnina sem ójöfnu, sýnt hana á talnalínu og prófað hana með prófunargildi.</li>
 </ul>
 <p class="noprint"><a class="jump" href="#f-aefing">Fara í æfingadæmi ↓</a></p>
 </div>
@@ -833,10 +830,10 @@ html[data-theme=dark] .save-warn{background:#33281a;border-color:#d39b55}}
 <div class="tag">Rifjaðu upp</div>
 <h2>Áður en við byrjum</h2>
 <p class="note">Reyndu að svara áður en þú opnar svarið.</p>
-<details class="recall"><summary>1. Ritaðu <math xmlns="http://www.w3.org/1998/Math/MathML"><mo form="prefix" lspace="0" rspace="0">−</mo><mn>2</mn><mo>&lt;</mo><mi>x</mi><mo>≤</mo><mn>5</mn></math> með bilaskrift.</summary>
-<p><math xmlns="http://www.w3.org/1998/Math/MathML"><mo stretchy="false" lspace="0" rspace="0">(</mo><mo form="prefix" lspace="0" rspace="0">−</mo><mn>2</mn><mo separator="true" lspace="0" rspace="0.35em">,</mo><mn>5</mn><mo stretchy="false" lspace="0" rspace="0">]</mo></math>. <math xmlns="http://www.w3.org/1998/Math/MathML"><mo form="prefix" lspace="0" rspace="0">−</mo><mn>2</mn></math> er ekki með (<math xmlns="http://www.w3.org/1998/Math/MathML"><mo>&lt;</mo></math>), en <math xmlns="http://www.w3.org/1998/Math/MathML"><mn>5</mn></math> er með (<math xmlns="http://www.w3.org/1998/Math/MathML"><mo>≤</mo></math>).</p></details>
+<details class="recall"><summary>1. Hvernig er <math xmlns="http://www.w3.org/1998/Math/MathML"><mo form="prefix" lspace="0" rspace="0">−</mo><mn>2</mn><mo>&lt;</mo><mi>x</mi><mo>≤</mo><mn>5</mn></math> sýnt á talnalínu?</summary>
+<p>Opinn hringur við <math xmlns="http://www.w3.org/1998/Math/MathML"><mo form="prefix" lspace="0" rspace="0">−</mo><mn>2</mn></math> (ekki með, <math xmlns="http://www.w3.org/1998/Math/MathML"><mo>&lt;</mo></math>), fylltur punktur við <math xmlns="http://www.w3.org/1998/Math/MathML"><mn>5</mn></math> (með, <math xmlns="http://www.w3.org/1998/Math/MathML"><mo>≤</mo></math>) og strik á milli.</p><svg class="numline" id="frnl" viewBox="0 0 220 44" role="img" aria-label="Talnalína: opinn hringur við −2, fylltur punktur við 5, strik á milli"></svg></details>
 <details class="recall"><summary>2. Leystu ójöfnuna <math xmlns="http://www.w3.org/1998/Math/MathML"><msup><mi>x</mi><mn>2</mn></msup><mo>−</mo><mi>x</mi><mo>−</mo><mn>2</mn><mo>&lt;</mo><mn>0</mn></math>.</summary>
-<p><math xmlns="http://www.w3.org/1998/Math/MathML"><mo stretchy="false" lspace="0" rspace="0">(</mo><mi>x</mi><mo>−</mo><mn>2</mn><mo stretchy="false" lspace="0" rspace="0">)</mo><mo stretchy="false" lspace="0" rspace="0">(</mo><mi>x</mi><mo>+</mo><mn>1</mn><mo stretchy="false" lspace="0" rspace="0">)</mo><mo>&lt;</mo><mn>0</mn></math>. Fleygboginn opnast upp og er neikvæður milli núllstöðvanna, svo lausnin er <math xmlns="http://www.w3.org/1998/Math/MathML"><mo stretchy="false" lspace="0" rspace="0">(</mo><mo form="prefix" lspace="0" rspace="0">−</mo><mn>1</mn><mo separator="true" lspace="0" rspace="0.35em">,</mo><mn>2</mn><mo stretchy="false" lspace="0" rspace="0">)</mo></math>.</p></details>
+<p><math xmlns="http://www.w3.org/1998/Math/MathML"><mo stretchy="false" lspace="0" rspace="0">(</mo><mi>x</mi><mo>−</mo><mn>2</mn><mo stretchy="false" lspace="0" rspace="0">)</mo><mo stretchy="false" lspace="0" rspace="0">(</mo><mi>x</mi><mo>+</mo><mn>1</mn><mo stretchy="false" lspace="0" rspace="0">)</mo><mo>&lt;</mo><mn>0</mn></math>. Fleygboginn opnast upp og er neikvæður milli núllstöðvanna, svo lausnin er <math xmlns="http://www.w3.org/1998/Math/MathML"><mo form="prefix" lspace="0" rspace="0">−</mo><mn>1</mn><mo>&lt;</mo><mi>x</mi><mo>&lt;</mo><mn>2</mn></math>.</p></details>
 <details class="recall"><summary>3. Skerast fleygboginn <math xmlns="http://www.w3.org/1998/Math/MathML"><mi>y</mi><mo>=</mo><msup><mi>x</mi><mn>2</mn></msup><mo>+</mo><mn>2</mn></math> og línan <math xmlns="http://www.w3.org/1998/Math/MathML"><mi>y</mi><mo>=</mo><mn>2</mn><mi>x</mi></math>?</summary>
 <p>Nei. <math xmlns="http://www.w3.org/1998/Math/MathML"><msup><mi>x</mi><mn>2</mn></msup><mo>−</mo><mn>2</mn><mi>x</mi><mo>+</mo><mn>2</mn><mo>=</mo><mn>0</mn></math> hefur <math xmlns="http://www.w3.org/1998/Math/MathML"><mi>d</mi><mo>=</mo><mn>4</mn><mo>−</mo><mn>8</mn><mo>=</mo><mo form="prefix" lspace="0" rspace="0">−</mo><mn>4</mn><mo>&lt;</mo><mn>0</mn></math>.</p></details>
 </div>
@@ -870,7 +867,7 @@ html[data-theme=dark] .save-warn{background:#33281a;border-color:#d39b55}}
 <div id="fpoeReveal" hidden>
 <div class="table-wrap"><table class="test-table"><thead><tr><th scope="col">Prófunargildi</th><th scope="col"><math xmlns="http://www.w3.org/1998/Math/MathML"><mo form="prefix" lspace="0" rspace="0">−</mo><mn>2</mn><mi>x</mi></math></th><th scope="col">Er <math xmlns="http://www.w3.org/1998/Math/MathML"><mo form="prefix" lspace="0" rspace="0">−</mo><mn>2</mn><mi>x</mi><mo>&lt;</mo><mn>6</mn></math>?</th></tr></thead><tbody><tr><td><math xmlns="http://www.w3.org/1998/Math/MathML"><mi>x</mi><mo>=</mo><mo form="prefix" lspace="0" rspace="0">−</mo><mn>5</mn></math></td><td><math xmlns="http://www.w3.org/1998/Math/MathML"><mn>10</mn></math></td><td>Nei</td></tr><tr><td><math xmlns="http://www.w3.org/1998/Math/MathML"><mi>x</mi><mo>=</mo><mo form="prefix" lspace="0" rspace="0">−</mo><mn>3</mn></math></td><td><math xmlns="http://www.w3.org/1998/Math/MathML"><mn>6</mn></math></td><td>Nei (<math xmlns="http://www.w3.org/1998/Math/MathML"><mn>6</mn><mo>&lt;</mo><mn>6</mn></math> er ósatt)</td></tr><tr><td><math xmlns="http://www.w3.org/1998/Math/MathML"><mi>x</mi><mo>=</mo><mo form="prefix" lspace="0" rspace="0">−</mo><mn>1</mn></math></td><td><math xmlns="http://www.w3.org/1998/Math/MathML"><mn>2</mn></math></td><td>Já</td></tr><tr><td><math xmlns="http://www.w3.org/1998/Math/MathML"><mi>x</mi><mo>=</mo><mn>0</mn></math></td><td><math xmlns="http://www.w3.org/1998/Math/MathML"><mn>0</mn></math></td><td>Já</td></tr><tr><td><math xmlns="http://www.w3.org/1998/Math/MathML"><mi>x</mi><mo>=</mo><mn>4</mn></math></td><td><math xmlns="http://www.w3.org/1998/Math/MathML"><mo form="prefix" lspace="0" rspace="0">−</mo><mn>8</mn></math></td><td>Já</td></tr></tbody></table></div>
 <svg class="numline" id="fpoeLine" viewBox="0 0 300 44" role="img" aria-label="Talnalína: opinn hringur við −3 og strik til hægri án enda"></svg>
-<p class="answerbox">Lausnirnar eru tölur stærri en <math xmlns="http://www.w3.org/1998/Math/MathML"><mo form="prefix" lspace="0" rspace="0">−</mo><mn>3</mn></math>, þ.e. bilið <math xmlns="http://www.w3.org/1998/Math/MathML"><mo stretchy="false" lspace="0" rspace="0">(</mo><mo form="prefix" lspace="0" rspace="0">−</mo><mn>3</mn><mo separator="true" lspace="0" rspace="0.35em">,</mo><mi>∞</mi><mo stretchy="false" lspace="0" rspace="0">)</mo></math>. Merkið snerist við þegar deilt var með <math xmlns="http://www.w3.org/1998/Math/MathML"><mo form="prefix" lspace="0" rspace="0">−</mo><mn>2</mn></math>.</p>
+<p class="answerbox">Lausnirnar eru tölur stærri en <math xmlns="http://www.w3.org/1998/Math/MathML"><mo form="prefix" lspace="0" rspace="0">−</mo><mn>3</mn></math>, þ.e. <math xmlns="http://www.w3.org/1998/Math/MathML"><mi>x</mi><mo>&gt;</mo><mo form="prefix" lspace="0" rspace="0">−</mo><mn>3</mn></math>. Merkið snerist við þegar deilt var með <math xmlns="http://www.w3.org/1998/Math/MathML"><mo form="prefix" lspace="0" rspace="0">−</mo><mn>2</mn></math>.</p>
 </div>
 </div>
 
@@ -883,7 +880,7 @@ html[data-theme=dark] .save-warn{background:#33281a;border-color:#d39b55}}
 <tr><td><math xmlns="http://www.w3.org/1998/Math/MathML"><mn>2</mn><mi>x</mi><mo>&lt;</mo><mn>4</mn></math></td><td>Einföldun.</td></tr>
 <tr><td><math xmlns="http://www.w3.org/1998/Math/MathML"><mi>x</mi><mo>&lt;</mo><mn>2</mn></math></td><td>Deilt með <math xmlns="http://www.w3.org/1998/Math/MathML"><mn>2</mn><mo>&gt;</mo><mn>0</mn></math>. Merkið helst.</td></tr>
 </tbody></table>
-<p class="answerbox">Lausn: <math xmlns="http://www.w3.org/1998/Math/MathML"><mo stretchy="false" lspace="0" rspace="0">(</mo><mo form="prefix" lspace="0" rspace="0">−</mo><mi>∞</mi><mo separator="true" lspace="0" rspace="0.35em">,</mo><mn>2</mn><mo stretchy="false" lspace="0" rspace="0">)</mo></math></p>
+<p class="answerbox">Lausn: <math xmlns="http://www.w3.org/1998/Math/MathML"><mi>x</mi><mo>&lt;</mo><mn>2</mn></math></p>
 <h3>b) <math xmlns="http://www.w3.org/1998/Math/MathML"><mi>x</mi><mo>−</mo><mn>3</mn><mo>≥</mo><mn>2</mn><mi>x</mi><mo>+</mo><mn>1</mn></math></h3>
 <table class="steps"><tbody>
 <tr><td><math xmlns="http://www.w3.org/1998/Math/MathML"><mi>x</mi><mo>−</mo><mn>2</mn><mi>x</mi><mo>≥</mo><mn>1</mn><mo>+</mo><mn>3</mn></math></td><td>Safna liðum.</td></tr>
@@ -891,7 +888,7 @@ html[data-theme=dark] .save-warn{background:#33281a;border-color:#d39b55}}
 <tr><td><math xmlns="http://www.w3.org/1998/Math/MathML"><mi>x</mi><mo>≤</mo><mo form="prefix" lspace="0" rspace="0">−</mo><mn>4</mn></math></td><td>Margfaldað með <math xmlns="http://www.w3.org/1998/Math/MathML"><mo form="prefix" lspace="0" rspace="0">−</mo><mn>1</mn></math>. <strong>Merkið snýst við.</strong></td></tr>
 <tr><td><span class="tline"><math xmlns="http://www.w3.org/1998/Math/MathML"><mi>x</mi><mo>=</mo><mo form="prefix" lspace="0" rspace="0">−</mo><mn>5</mn></math> gefur <math xmlns="http://www.w3.org/1998/Math/MathML"><mo form="prefix" lspace="0" rspace="0">−</mo><mn>8</mn><mo>≥</mo><mo form="prefix" lspace="0" rspace="0">−</mo><mn>9</mn></math> ✓</span><span class="tline"><math xmlns="http://www.w3.org/1998/Math/MathML"><mi>x</mi><mo>=</mo><mn>0</mn></math> gefur <math xmlns="http://www.w3.org/1998/Math/MathML"><mo form="prefix" lspace="0" rspace="0">−</mo><mn>3</mn><mo>≥</mo><mn>1</mn></math> ✗</span></td><td>Prófun: <math xmlns="http://www.w3.org/1998/Math/MathML"><mo form="prefix" lspace="0" rspace="0">−</mo><mn>5</mn></math> er í lausninni, <math xmlns="http://www.w3.org/1998/Math/MathML"><mn>0</mn></math> ekki.</td></tr>
 </tbody></table>
-<p class="answerbox">Lausn: <math xmlns="http://www.w3.org/1998/Math/MathML"><mo stretchy="false" lspace="0" rspace="0">(</mo><mo form="prefix" lspace="0" rspace="0">−</mo><mi>∞</mi><mo separator="true" lspace="0" rspace="0.35em">,</mo><mo form="prefix" lspace="0" rspace="0">−</mo><mn>4</mn><mo stretchy="false" lspace="0" rspace="0">]</mo></math></p>
+<p class="answerbox">Lausn: <math xmlns="http://www.w3.org/1998/Math/MathML"><mi>x</mi><mo>≤</mo><mo form="prefix" lspace="0" rspace="0">−</mo><mn>4</mn></math></p>
 </div>
 
 <div class="panel worked" id="f-s2">
@@ -903,12 +900,12 @@ html[data-theme=dark] .save-warn{background:#33281a;border-color:#d39b55}}
 <p><math xmlns="http://www.w3.org/1998/Math/MathML"><mo form="prefix" lspace="0" rspace="0">−</mo><msup><mi>x</mi><mn>2</mn></msup><mo>+</mo><mn>5</mn><mi>x</mi><mo>−</mo><mn>4</mn><mo>=</mo><mo form="prefix" lspace="0" rspace="0">−</mo><mo stretchy="false" lspace="0" rspace="0">(</mo><mi>x</mi><mo>−</mo><mn>1</mn><mo stretchy="false" lspace="0" rspace="0">)</mo><mo stretchy="false" lspace="0" rspace="0">(</mo><mi>x</mi><mo>−</mo><mn>4</mn><mo stretchy="false" lspace="0" rspace="0">)</mo></math></p>
 <p>Núllstöðvar: 1 og 4.</p>
 <p><math xmlns="http://www.w3.org/1998/Math/MathML"><mi>a</mi><mo>=</mo><mo form="prefix" lspace="0" rspace="0">−</mo><mn>1</mn><mo>&lt;</mo><mn>0</mn></math>: fleygboginn opnast niður og er fyrir ofan ásinn milli núllstöðvanna.</p>
-<p class="answerbox">Lausn: <math xmlns="http://www.w3.org/1998/Math/MathML"><mo stretchy="false" lspace="0" rspace="0">[</mo><mn>1</mn><mo separator="true" lspace="0" rspace="0.35em">,</mo><mn>4</mn><mo stretchy="false" lspace="0" rspace="0">]</mo></math></p></div>
+<p class="answerbox">Lausn: <math xmlns="http://www.w3.org/1998/Math/MathML"><mn>1</mn><mo>≤</mo><mi>x</mi><mo>≤</mo><mn>4</mn></math></p></div>
 <div><h3>Bjarki: margfaldar með −1</h3>
 <p><math xmlns="http://www.w3.org/1998/Math/MathML"><msup><mi>x</mi><mn>2</mn></msup><mo>−</mo><mn>5</mn><mi>x</mi><mo>+</mo><mn>4</mn><mo>≤</mo><mn>0</mn></math></p>
 <p>Merkið snerist við: <math xmlns="http://www.w3.org/1998/Math/MathML"><mo>≥</mo></math> varð <math xmlns="http://www.w3.org/1998/Math/MathML"><mo>≤</mo></math>.</p>
 <p><math xmlns="http://www.w3.org/1998/Math/MathML"><mo stretchy="false" lspace="0" rspace="0">(</mo><mi>x</mi><mo>−</mo><mn>1</mn><mo stretchy="false" lspace="0" rspace="0">)</mo><mo stretchy="false" lspace="0" rspace="0">(</mo><mi>x</mi><mo>−</mo><mn>4</mn><mo stretchy="false" lspace="0" rspace="0">)</mo><mo>≤</mo><mn>0</mn></math>. Fleygboginn opnast upp og er <math xmlns="http://www.w3.org/1998/Math/MathML"><mo>≤</mo><mn>0</mn></math> milli núllstöðvanna.</p>
-<p class="answerbox">Lausn: <math xmlns="http://www.w3.org/1998/Math/MathML"><mo stretchy="false" lspace="0" rspace="0">[</mo><mn>1</mn><mo separator="true" lspace="0" rspace="0.35em">,</mo><mn>4</mn><mo stretchy="false" lspace="0" rspace="0">]</mo></math></p></div>
+<p class="answerbox">Lausn: <math xmlns="http://www.w3.org/1998/Math/MathML"><mn>1</mn><mo>≤</mo><mi>x</mi><mo>≤</mo><mn>4</mn></math></p></div>
 </div>
 <p>Báðar leiðir eru réttar. Leið Bjarka gefur jákvæðan fremsta stuðul, en þá má ekki gleyma að snúa merkinu við.</p>
 <fieldset class="q" data-q="q12" data-correct="a"><legend>Hvers vegna sneri Bjarki merkinu við?</legend>
@@ -931,7 +928,7 @@ html[data-theme=dark] .save-warn{background:#33281a;border-color:#d39b55}}
 <p><strong>Kláraðu dæmið í stílabókinni</strong> áður en þú opnar lausnina.</p>
 <details><summary>Sýna lokasvar og prófun</summary>
 <p><math xmlns="http://www.w3.org/1998/Math/MathML"><mi>x</mi><mo>≤</mo><mn>2</mn></math>.</p><p>Prófun: <math xmlns="http://www.w3.org/1998/Math/MathML"><mi>x</mi><mo>=</mo><mn>0</mn></math> gefur <math xmlns="http://www.w3.org/1998/Math/MathML"><mn>0</mn><mo>≤</mo><mn>6</mn></math> ✓ og <math xmlns="http://www.w3.org/1998/Math/MathML"><mi>x</mi><mo>=</mo><mn>3</mn></math> gefur <math xmlns="http://www.w3.org/1998/Math/MathML"><mn>18</mn><mo>≤</mo><mn>15</mn></math> ✗.</p>
-<p class="answerbox">Lausn: <math xmlns="http://www.w3.org/1998/Math/MathML"><mo stretchy="false" lspace="0" rspace="0">(</mo><mo form="prefix" lspace="0" rspace="0">−</mo><mi>∞</mi><mo separator="true" lspace="0" rspace="0.35em">,</mo><mn>2</mn><mo stretchy="false" lspace="0" rspace="0">]</mo></math></p></details>
+<p class="answerbox">Lausn: <math xmlns="http://www.w3.org/1998/Math/MathML"><mi>x</mi><mo>≤</mo><mn>2</mn></math></p></details>
 <p class="note">Stig ójöfnu ræðst af hæsta veldi x <strong>eftir</strong> einföldun.</p>
 </div>
 
@@ -943,8 +940,8 @@ html[data-theme=dark] .save-warn{background:#33281a;border-color:#d39b55}}
 <ol>
 <li>Einfaldaðu og færðu alla liði á vinstri hlið.</li>
 <li><strong>Enginn <math xmlns="http://www.w3.org/1998/Math/MathML"><msup><mi>x</mi><mn>2</mn></msup></math>-liður:</strong> fyrsta stigs. Einangraðu x og snúðu merkinu við ef þú margfaldar eða deilir með neikvæðri tölu.</li>
-<li><strong><math xmlns="http://www.w3.org/1998/Math/MathML"><msup><mi>x</mi><mn>2</mn></msup></math>-liður:</strong> annars stigs. Finndu núllstöðvarnar og síðan formerkið á hverju bili.</li>
-<li>Ritaðu lausnamengið með bilaskrift og prófaðu eitt gildi.</li>
+<li><strong><math xmlns="http://www.w3.org/1998/Math/MathML"><msup><mi>x</mi><mn>2</mn></msup></math>-liður:</strong> annars stigs. Finndu núllstöðvarnar og notaðu opnun fleygbogans.</li>
+<li>Skrifaðu lausnina sem ójöfnu (eða sýndu hana á talnalínu) og prófaðu eitt gildi.</li>
 </ol>
 </div>
 </div>
@@ -979,11 +976,13 @@ html[data-theme=dark] .save-warn{background:#33281a;border-color:#d39b55}}
 <template data-for="aldrei">Ef <math xmlns="http://www.w3.org/1998/Math/MathML"><mi>x</mi><mo>&gt;</mo><mn>0</mn></math> helst merkið. Er það þá aldrei satt?</template>
 </fieldset>
 <h3>Upprifjun frá í gær</h3>
-<fieldset class="q" data-q="q9" data-correct="c"><legend>Hvaða ritháttur bils er rangur?</legend>
-<div class="choice-row"><button type="button" data-val="a"><math xmlns="http://www.w3.org/1998/Math/MathML"><mo stretchy="false" lspace="0" rspace="0">[</mo><mn>2</mn><mo separator="true" lspace="0" rspace="0.35em">,</mo><mi>∞</mi><mo stretchy="false" lspace="0" rspace="0">)</mo></math></button><button type="button" data-val="b"><math xmlns="http://www.w3.org/1998/Math/MathML"><mo stretchy="false" lspace="0" rspace="0">(</mo><mo form="prefix" lspace="0" rspace="0">−</mo><mi>∞</mi><mo separator="true" lspace="0" rspace="0.35em">,</mo><mn>2</mn><mo stretchy="false" lspace="0" rspace="0">]</mo></math></button><button type="button" data-val="c"><math xmlns="http://www.w3.org/1998/Math/MathML"><mo stretchy="false" lspace="0" rspace="0">[</mo><mn>2</mn><mo separator="true" lspace="0" rspace="0.35em">,</mo><mi>∞</mi><mo stretchy="false" lspace="0" rspace="0">]</mo></math></button><button type="button" data-val="d"><math xmlns="http://www.w3.org/1998/Math/MathML"><mo stretchy="false" lspace="0" rspace="0">(</mo><mn>2</mn><mo separator="true" lspace="0" rspace="0.35em">,</mo><mi>∞</mi><mo stretchy="false" lspace="0" rspace="0">)</mo></math></button></div>
+<fieldset class="q" data-q="q9" data-correct="c"><legend>Hver er lausn ójöfnunnar <math xmlns="http://www.w3.org/1998/Math/MathML"><msup><mi>x</mi><mn>2</mn></msup><mo>−</mo><mn>4</mn><mo>≤</mo><mn>0</mn></math>?</legend>
+<div class="choice-row"><button type="button" data-val="a"><math xmlns="http://www.w3.org/1998/Math/MathML"><mo form="prefix" lspace="0" rspace="0">−</mo><mn>2</mn><mo>&lt;</mo><mi>x</mi><mo>&lt;</mo><mn>2</mn></math></button><button type="button" data-val="b"><math xmlns="http://www.w3.org/1998/Math/MathML"><mi>x</mi><mo>≤</mo><mo form="prefix" lspace="0" rspace="0">−</mo><mn>2</mn><mtext>&#160;eða&#160;</mtext><mi>x</mi><mo>≥</mo><mn>2</mn></math></button><button type="button" data-val="c"><math xmlns="http://www.w3.org/1998/Math/MathML"><mo form="prefix" lspace="0" rspace="0">−</mo><mn>2</mn><mo>≤</mo><mi>x</mi><mo>≤</mo><mn>2</mn></math></button><button type="button" data-val="d"><math xmlns="http://www.w3.org/1998/Math/MathML"><mi>x</mi><mo>≤</mo><mo>±</mo><mn>2</mn></math></button></div>
 <div class="feedback" role="status" aria-live="polite"></div>
-<template data-for="c">Rétt. <math xmlns="http://www.w3.org/1998/Math/MathML"><mi>∞</mi></math> er ekki tala og getur ekki verið endapunktur sem er með. Við <math xmlns="http://www.w3.org/1998/Math/MathML"><mi>∞</mi></math> er alltaf svigi.</template>
-<template data-for="other">Þessi ritháttur er réttur. Skoðaðu hvernig <math xmlns="http://www.w3.org/1998/Math/MathML"><mi>∞</mi></math> er ritað í hinum valkostunum.</template>
+<template data-for="c">Rétt. Núllstöðvarnar eru <math xmlns="http://www.w3.org/1998/Math/MathML"><mo form="prefix" lspace="0" rspace="0">−</mo><mn>2</mn></math> og <math xmlns="http://www.w3.org/1998/Math/MathML"><mn>2</mn></math>. Fleygboginn opnast upp og er fyrir neðan ásinn á milli þeirra, og með <math xmlns="http://www.w3.org/1998/Math/MathML"><mo>≤</mo></math> eru núllstöðvarnar með.</template>
+<template data-for="a">Næstum. Merkið <math xmlns="http://www.w3.org/1998/Math/MathML"><mo>≤</mo></math> leyfir líka 0, svo núllstöðvarnar <math xmlns="http://www.w3.org/1998/Math/MathML"><mo form="prefix" lspace="0" rspace="0">−</mo><mn>2</mn></math> og <math xmlns="http://www.w3.org/1998/Math/MathML"><mn>2</mn></math> eru með.</template>
+<template data-for="b">Prófaðu <math xmlns="http://www.w3.org/1998/Math/MathML"><mi>x</mi><mo>=</mo><mn>0</mn></math>: <math xmlns="http://www.w3.org/1998/Math/MathML"><mn>0</mn><mo>−</mo><mn>4</mn><mo>=</mo><mo form="prefix" lspace="0" rspace="0">−</mo><mn>4</mn><mo>≤</mo><mn>0</mn></math>. Gildi á milli núllstöðvanna uppfylla ójöfnuna.</template>
+<template data-for="d">„<math xmlns="http://www.w3.org/1998/Math/MathML"><mi>x</mi><mo>≤</mo><mo>±</mo><mn>2</mn></math>“ hefur enga skýra merkingu. Skrifaðu lausnina sem eina ójöfnu.</template>
 </fieldset>
 </div>
 
@@ -991,7 +990,7 @@ html[data-theme=dark] .save-warn{background:#33281a;border-color:#d39b55}}
 <div class="tag">Algeng mistök</div>
 <h2>Varastu þetta</h2>
 <div class="hint"><strong>Að gleyma að snúa merkinu við.</strong> <math xmlns="http://www.w3.org/1998/Math/MathML"><mo form="prefix" lspace="0" rspace="0">−</mo><mn>2</mn><mi>x</mi><mo>&lt;</mo><mn>6</mn><mo>⇒</mo><mi>x</mi><mo>&lt;</mo><mo form="prefix" lspace="0" rspace="0">−</mo><mn>3</mn></math>. <em>Hvers vegna er það rangt?</em> <math xmlns="http://www.w3.org/1998/Math/MathML"><mi>x</mi><mo>=</mo><mn>0</mn></math> uppfyllir <math xmlns="http://www.w3.org/1998/Math/MathML"><mo form="prefix" lspace="0" rspace="0">−</mo><mn>2</mn><mi>x</mi><mo>&lt;</mo><mn>6</mn></math>, því <math xmlns="http://www.w3.org/1998/Math/MathML"><mn>0</mn><mo>&lt;</mo><mn>6</mn></math>, en ekki <math xmlns="http://www.w3.org/1998/Math/MathML"><mi>x</mi><mo>&lt;</mo><mo form="prefix" lspace="0" rspace="0">−</mo><mn>3</mn></math>. <em>Rétt:</em> Deilt er með <math xmlns="http://www.w3.org/1998/Math/MathML"><mo form="prefix" lspace="0" rspace="0">−</mo><mn>2</mn></math>, svo merkið snýst við: <math xmlns="http://www.w3.org/1998/Math/MathML"><mi>x</mi><mo>&gt;</mo><mo form="prefix" lspace="0" rspace="0">−</mo><mn>3</mn></math>.</div>
-<div class="hint"><strong>Að deila með x.</strong> <math xmlns="http://www.w3.org/1998/Math/MathML"><msup><mi>x</mi><mn>2</mn></msup><mo>&gt;</mo><mn>3</mn><mi>x</mi><mo>⇒</mo><mi>x</mi><mo>&gt;</mo><mn>3</mn></math>. <em>Hvers vegna er það rangt?</em> <math xmlns="http://www.w3.org/1998/Math/MathML"><mi>x</mi><mo>=</mo><mo form="prefix" lspace="0" rspace="0">−</mo><mn>1</mn></math> uppfyllir <math xmlns="http://www.w3.org/1998/Math/MathML"><msup><mi>x</mi><mn>2</mn></msup><mo>&gt;</mo><mn>3</mn><mi>x</mi></math>, því <math xmlns="http://www.w3.org/1998/Math/MathML"><mn>1</mn><mo>&gt;</mo><mo form="prefix" lspace="0" rspace="0">−</mo><mn>3</mn></math>, en ekki <math xmlns="http://www.w3.org/1998/Math/MathML"><mi>x</mi><mo>&gt;</mo><mn>3</mn></math>. Formerki x er óþekkt. <em>Rétt:</em> <math xmlns="http://www.w3.org/1998/Math/MathML"><msup><mi>x</mi><mn>2</mn></msup><mo>−</mo><mn>3</mn><mi>x</mi><mo>&gt;</mo><mn>0</mn><mo lspace="0.6em" rspace="0.6em">⇔</mo><mi>x</mi><mo stretchy="false" lspace="0" rspace="0">(</mo><mi>x</mi><mo>−</mo><mn>3</mn><mo stretchy="false" lspace="0" rspace="0">)</mo><mo>&gt;</mo><mn>0</mn></math>, svo lausnin er <math xmlns="http://www.w3.org/1998/Math/MathML"><mo stretchy="false" lspace="0" rspace="0">(</mo><mo form="prefix" lspace="0" rspace="0">−</mo><mi>∞</mi><mo separator="true" lspace="0" rspace="0.35em">,</mo><mn>0</mn><mo stretchy="false" lspace="0" rspace="0">)</mo><mtext>&#160;eða&#160;</mtext><mo stretchy="false" lspace="0" rspace="0">(</mo><mn>3</mn><mo separator="true" lspace="0" rspace="0.35em">,</mo><mi>∞</mi><mo stretchy="false" lspace="0" rspace="0">)</mo></math>.</div>
+<div class="hint"><strong>Að deila með x.</strong> <math xmlns="http://www.w3.org/1998/Math/MathML"><msup><mi>x</mi><mn>2</mn></msup><mo>&gt;</mo><mn>3</mn><mi>x</mi><mo>⇒</mo><mi>x</mi><mo>&gt;</mo><mn>3</mn></math>. <em>Hvers vegna er það rangt?</em> <math xmlns="http://www.w3.org/1998/Math/MathML"><mi>x</mi><mo>=</mo><mo form="prefix" lspace="0" rspace="0">−</mo><mn>1</mn></math> uppfyllir <math xmlns="http://www.w3.org/1998/Math/MathML"><msup><mi>x</mi><mn>2</mn></msup><mo>&gt;</mo><mn>3</mn><mi>x</mi></math>, því <math xmlns="http://www.w3.org/1998/Math/MathML"><mn>1</mn><mo>&gt;</mo><mo form="prefix" lspace="0" rspace="0">−</mo><mn>3</mn></math>, en ekki <math xmlns="http://www.w3.org/1998/Math/MathML"><mi>x</mi><mo>&gt;</mo><mn>3</mn></math>. Formerki x er óþekkt. <em>Rétt:</em> <math xmlns="http://www.w3.org/1998/Math/MathML"><msup><mi>x</mi><mn>2</mn></msup><mo>−</mo><mn>3</mn><mi>x</mi><mo>&gt;</mo><mn>0</mn><mo lspace="0.6em" rspace="0.6em">⇔</mo><mi>x</mi><mo stretchy="false" lspace="0" rspace="0">(</mo><mi>x</mi><mo>−</mo><mn>3</mn><mo stretchy="false" lspace="0" rspace="0">)</mo><mo>&gt;</mo><mn>0</mn></math>, svo lausnin er <math xmlns="http://www.w3.org/1998/Math/MathML"><mi>x</mi><mo>&lt;</mo><mn>0</mn><mtext>&#160;eða&#160;</mtext><mi>x</mi><mo>&gt;</mo><mn>3</mn></math>.</div>
 <div class="hint"><strong>Að snúa merkinu við samlagningu.</strong> Sumir snúa merkinu í <math xmlns="http://www.w3.org/1998/Math/MathML"><mi>x</mi><mo>−</mo><mn>5</mn><mo>&gt;</mo><mo form="prefix" lspace="0" rspace="0">−</mo><mn>2</mn></math> af því að −2 er neikvætt og fá <math xmlns="http://www.w3.org/1998/Math/MathML"><mi>x</mi><mo>&lt;</mo><mn>3</mn></math>. <em>Hvers vegna er það rangt?</em> Merkið snýst aðeins við margföldun eða deilingu með neikvæðri tölu. <em>Rétt:</em> <math xmlns="http://www.w3.org/1998/Math/MathML"><mi>x</mi><mo>&gt;</mo><mn>3</mn></math>.</div>
 </div>
 
@@ -1017,12 +1016,12 @@ html[data-theme=dark] .save-warn{background:#33281a;border-color:#d39b55}}
 <div class="progress-track" aria-hidden="true"><div class="coreBar"></div></div>
 <p class="note progressMsg"></p>
 </div>
-<p><strong>Í dæmum 3.1–3.6:</strong> Leystu ójöfnuna og ritaðu lausnamengið með bilaskrift.</p>
+<p><strong>Í dæmum 3.1–3.6:</strong> Leystu ójöfnuna. Skrifaðu lausnina sem ójöfnu eða sýndu hana á talnalínu.</p>
 <article class="ex core-ex" id="ex-3-1" data-ex="3.1" data-kind="core" data-hints="2">
 <div class="ex-head"><span class="core">3.1</span><span class="ex-kind">Kjarnadæmi</span></div>
 <p><math xmlns="http://www.w3.org/1998/Math/MathML"><mn>5</mn><mi>x</mi><mo>−</mo><mn>3</mn><mo>&gt;</mo><mn>2</mn><mi>x</mi><mo>+</mo><mn>9</mn></math></p>
 <div class="actions"><a class="exlink exbtn" href="#f-s1">Sýnidæmi 1</a><button type="button" class="sol-btn" aria-expanded="false">Lausn</button></div>
-<div class="answerbox sol" hidden><strong>Lokasvar:</strong> <math xmlns="http://www.w3.org/1998/Math/MathML"><mo stretchy="false" lspace="0" rspace="0">(</mo><mn>4</mn><mo separator="true" lspace="0" rspace="0.35em">,</mo><mi>∞</mi><mo stretchy="false" lspace="0" rspace="0">)</mo></math></div>
+<div class="answerbox sol" hidden><strong>Lokasvar:</strong> <math xmlns="http://www.w3.org/1998/Math/MathML"><mi>x</mi><mo>&gt;</mo><mn>4</mn></math></div>
 <label class="done"><input type="checkbox" data-done="3.1"> Ég hef æft dæmið</label>
 </article>
 <article class="ex core-ex" id="ex-3-2" data-ex="3.2" data-kind="core" data-hints="2">
@@ -1030,13 +1029,13 @@ html[data-theme=dark] .save-warn{background:#33281a;border-color:#d39b55}}
 <p><math xmlns="http://www.w3.org/1998/Math/MathML"><mn>7</mn><mo>−</mo><mn>2</mn><mi>x</mi><mo>≤</mo><mn>13</mn></math></p>
 <div class="actions"><button type="button" class="hint-btn" aria-controls="ex-3-2">Vísbending 1</button><button type="button" class="sol-btn" aria-expanded="false">Lausn</button></div>
 <div class="hint" data-level="1" hidden><strong>Vísbending 1:</strong> Dragðu <math xmlns="http://www.w3.org/1998/Math/MathML"><mn>7</mn></math> frá báðum hliðum.</div><div class="hint" data-level="2" hidden><strong>Vísbending 2:</strong> <math xmlns="http://www.w3.org/1998/Math/MathML"><mo form="prefix" lspace="0" rspace="0">−</mo><mn>2</mn><mi>x</mi><mo>≤</mo><mn>6</mn></math>. Hvað gerist við merkið þegar deilt er með <math xmlns="http://www.w3.org/1998/Math/MathML"><mo form="prefix" lspace="0" rspace="0">−</mo><mn>2</mn></math>?</div>
-<div class="answerbox sol" hidden><strong>Lokasvar:</strong> <math xmlns="http://www.w3.org/1998/Math/MathML"><mo stretchy="false" lspace="0" rspace="0">[</mo><mo form="prefix" lspace="0" rspace="0">−</mo><mn>3</mn><mo separator="true" lspace="0" rspace="0.35em">,</mo><mi>∞</mi><mo stretchy="false" lspace="0" rspace="0">)</mo></math></div>
+<div class="answerbox sol" hidden><strong>Lokasvar:</strong> <math xmlns="http://www.w3.org/1998/Math/MathML"><mi>x</mi><mo>≥</mo><mo form="prefix" lspace="0" rspace="0">−</mo><mn>3</mn></math></div>
 <label class="done"><input type="checkbox" data-done="3.2"> Ég hef æft dæmið</label>
 </article>
 <article class="ex core-ex" id="ex-3-3" data-sd="1" data-ex="3.3" data-kind="core" data-hints="1">
 <div class="ex-head"><span class="core">3.3</span><span class="ex-kind">Kjarnadæmi</span></div>
 <p><math xmlns="http://www.w3.org/1998/Math/MathML"><mn>2</mn><mo stretchy="false" lspace="0" rspace="0">(</mo><mn>3</mn><mo>−</mo><mi>x</mi><mo stretchy="false" lspace="0" rspace="0">)</mo><mo>&gt;</mo><mi>x</mi><mo>−</mo><mn>9</mn></math></p>
-<details class="exsd"><summary>Sýnidæmi</summary><div class="sd-body"><p><strong>Líkt dæmi:</strong> Leystu <math xmlns="http://www.w3.org/1998/Math/MathML"><mn>3</mn><mo stretchy="false" lspace="0" rspace="0">(</mo><mn>1</mn><mo>−</mo><mi>x</mi><mo stretchy="false" lspace="0" rspace="0">)</mo><mo>≤</mo><mi>x</mi><mo>+</mo><mn>7</mn></math>.</p><table class="steps"><tbody><tr><td><math xmlns="http://www.w3.org/1998/Math/MathML"><mn>3</mn><mo>−</mo><mn>3</mn><mi>x</mi><mo>≤</mo><mi>x</mi><mo>+</mo><mn>7</mn></math></td><td>Margfaldað inn í svigann.</td></tr><tr><td><math xmlns="http://www.w3.org/1998/Math/MathML"><mo form="prefix" lspace="0" rspace="0">−</mo><mn>4</mn><mi>x</mi><mo>≤</mo><mn>4</mn></math></td><td>x-liðir vinstra megin, tölur hægra megin.</td></tr><tr><td><math xmlns="http://www.w3.org/1998/Math/MathML"><mi>x</mi><mo>≥</mo><mo form="prefix" lspace="0" rspace="0">−</mo><mn>1</mn></math></td><td>Deilt með −4. <strong>Merkið snýst við.</strong></td></tr></tbody></table><p class="answerbox">Lausn: <math xmlns="http://www.w3.org/1998/Math/MathML"><mo stretchy="false" lspace="0" rspace="0">[</mo><mo form="prefix" lspace="0" rspace="0">−</mo><mn>1</mn><mo separator="true" lspace="0" rspace="0.35em">,</mo><mi>∞</mi><mo stretchy="false" lspace="0" rspace="0">)</mo></math></p></div></details>
+<details class="exsd"><summary>Sýnidæmi</summary><div class="sd-body"><p><strong>Líkt dæmi:</strong> Leystu <math xmlns="http://www.w3.org/1998/Math/MathML"><mn>3</mn><mo stretchy="false" lspace="0" rspace="0">(</mo><mn>1</mn><mo>−</mo><mi>x</mi><mo stretchy="false" lspace="0" rspace="0">)</mo><mo>≤</mo><mi>x</mi><mo>+</mo><mn>7</mn></math>.</p><table class="steps"><tbody><tr><td><math xmlns="http://www.w3.org/1998/Math/MathML"><mn>3</mn><mo>−</mo><mn>3</mn><mi>x</mi><mo>≤</mo><mi>x</mi><mo>+</mo><mn>7</mn></math></td><td>Margfaldað inn í svigann.</td></tr><tr><td><math xmlns="http://www.w3.org/1998/Math/MathML"><mo form="prefix" lspace="0" rspace="0">−</mo><mn>4</mn><mi>x</mi><mo>≤</mo><mn>4</mn></math></td><td>x-liðir vinstra megin, tölur hægra megin.</td></tr><tr><td><math xmlns="http://www.w3.org/1998/Math/MathML"><mi>x</mi><mo>≥</mo><mo form="prefix" lspace="0" rspace="0">−</mo><mn>1</mn></math></td><td>Deilt með −4. <strong>Merkið snýst við.</strong></td></tr></tbody></table><p class="answerbox">Lausn: <math xmlns="http://www.w3.org/1998/Math/MathML"><mi>x</mi><mo>≥</mo><mo form="prefix" lspace="0" rspace="0">−</mo><mn>1</mn></math></p></div></details>
 <label class="done"><input type="checkbox" data-done="3.3"> Ég hef æft dæmið</label>
 </article>
 <article class="ex core-ex" id="ex-3-4" data-ex="3.4" data-kind="core" data-hints="1">
@@ -1044,7 +1043,7 @@ html[data-theme=dark] .save-warn{background:#33281a;border-color:#d39b55}}
 <p><math xmlns="http://www.w3.org/1998/Math/MathML"><msup><mi>x</mi><mn>2</mn></msup><mo>≥</mo><mn>4</mn><mi>x</mi></math></p>
 <div class="actions"><button type="button" class="hint-btn" aria-controls="ex-3-4">Vísbending</button><button type="button" class="sol-btn" aria-expanded="false">Lausn</button></div>
 <div class="hint" data-level="1" hidden><strong>Vísbending 1:</strong> Ekki deila með x. Færðu <math xmlns="http://www.w3.org/1998/Math/MathML"><mn>4</mn><mi>x</mi></math> yfir og taktu x út fyrir sviga.</div>
-<div class="answerbox sol" hidden><strong>Lokasvar:</strong> <math xmlns="http://www.w3.org/1998/Math/MathML"><mo stretchy="false" lspace="0" rspace="0">(</mo><mo form="prefix" lspace="0" rspace="0">−</mo><mi>∞</mi><mo separator="true" lspace="0" rspace="0.35em">,</mo><mn>0</mn><mo stretchy="false" lspace="0" rspace="0">]</mo><mtext>&#160;eða&#160;</mtext><mo stretchy="false" lspace="0" rspace="0">[</mo><mn>4</mn><mo separator="true" lspace="0" rspace="0.35em">,</mo><mi>∞</mi><mo stretchy="false" lspace="0" rspace="0">)</mo></math></div>
+<div class="answerbox sol" hidden><strong>Lokasvar:</strong> <math xmlns="http://www.w3.org/1998/Math/MathML"><mi>x</mi><mo>≤</mo><mn>0</mn><mtext>&#160;eða&#160;</mtext><mi>x</mi><mo>≥</mo><mn>4</mn></math></div>
 <label class="done"><input type="checkbox" data-done="3.4"> Ég hef æft dæmið</label>
 </article>
 <article class="ex core-ex" id="ex-3-5" data-ex="3.5" data-kind="core" data-hints="1">
@@ -1052,7 +1051,7 @@ html[data-theme=dark] .save-warn{background:#33281a;border-color:#d39b55}}
 <p><math xmlns="http://www.w3.org/1998/Math/MathML"><mi>x</mi><mo stretchy="false" lspace="0" rspace="0">(</mo><mi>x</mi><mo>−</mo><mn>4</mn><mo stretchy="false" lspace="0" rspace="0">)</mo><mo>≥</mo><msup><mi>x</mi><mn>2</mn></msup><mo>−</mo><mn>8</mn></math></p>
 <div class="actions"><button type="button" class="hint-btn" aria-controls="ex-3-5">Vísbending</button><button type="button" class="sol-btn" aria-expanded="false">Lausn</button></div>
 <div class="hint" data-level="1" hidden><strong>Vísbending 1:</strong> Margfaldaðu inn í svigann. Hvaða stigs er ójafnan eftir einföldun? Gættu að merkinu.</div>
-<div class="answerbox sol" hidden><strong>Lokasvar:</strong> <math xmlns="http://www.w3.org/1998/Math/MathML"><mo stretchy="false" lspace="0" rspace="0">(</mo><mo form="prefix" lspace="0" rspace="0">−</mo><mi>∞</mi><mo separator="true" lspace="0" rspace="0.35em">,</mo><mn>2</mn><mo stretchy="false" lspace="0" rspace="0">]</mo></math></div>
+<div class="answerbox sol" hidden><strong>Lokasvar:</strong> <math xmlns="http://www.w3.org/1998/Math/MathML"><mi>x</mi><mo>≤</mo><mn>2</mn></math></div>
 <label class="done"><input type="checkbox" data-done="3.5"> Ég hef æft dæmið</label>
 </article>
 <article class="ex core-ex" id="ex-3-6" data-ex="3.6" data-kind="core" data-hints="1">
@@ -1060,7 +1059,7 @@ html[data-theme=dark] .save-warn{background:#33281a;border-color:#d39b55}}
 <p><math xmlns="http://www.w3.org/1998/Math/MathML"><msup><mi>x</mi><mn>2</mn></msup><mo>+</mo><mn>3</mn><mi>x</mi><mo>−</mo><mn>10</mn><mo>&lt;</mo><mn>0</mn></math></p>
 <div class="actions"><button type="button" class="hint-btn" aria-controls="ex-3-6">Vísbending</button><button type="button" class="sol-btn" aria-expanded="false">Lausn</button></div>
 <div class="hint" data-level="1" hidden><strong>Vísbending 1:</strong> Leitaðu að tveimur tölum með margfeldið <math xmlns="http://www.w3.org/1998/Math/MathML"><mo form="prefix" lspace="0" rspace="0">−</mo><mn>10</mn></math> og summuna <math xmlns="http://www.w3.org/1998/Math/MathML"><mn>3</mn></math>.</div>
-<div class="answerbox sol" hidden><strong>Lokasvar:</strong> <math xmlns="http://www.w3.org/1998/Math/MathML"><mo stretchy="false" lspace="0" rspace="0">(</mo><mo form="prefix" lspace="0" rspace="0">−</mo><mn>5</mn><mo separator="true" lspace="0" rspace="0.35em">,</mo><mn>2</mn><mo stretchy="false" lspace="0" rspace="0">)</mo></math></div>
+<div class="answerbox sol" hidden><strong>Lokasvar:</strong> <math xmlns="http://www.w3.org/1998/Math/MathML"><mo form="prefix" lspace="0" rspace="0">−</mo><mn>5</mn><mo>&lt;</mo><mi>x</mi><mo>&lt;</mo><mn>2</mn></math></div>
 <label class="done"><input type="checkbox" data-done="3.6"> Ég hef æft dæmið</label>
 </article>
 <article class="ex core-ex" id="ex-3-7" data-ex="3.7" data-kind="core" data-hints="1">
@@ -1068,7 +1067,7 @@ html[data-theme=dark] .save-warn{background:#33281a;border-color:#d39b55}}
 <p>a) Finndu skurðpunkta fleygbogans <math xmlns="http://www.w3.org/1998/Math/MathML"><mi>y</mi><mo>=</mo><msup><mi>x</mi><mn>2</mn></msup><mo>−</mo><mn>1</mn></math> og línunnar <math xmlns="http://www.w3.org/1998/Math/MathML"><mi>y</mi><mo>=</mo><mi>x</mi><mo>+</mo><mn>1</mn></math>.<br>b) Fyrir hvaða x liggur fleygboginn fyrir neðan línuna?</p>
 <div class="actions"><button type="button" class="hint-btn" aria-controls="ex-3-7">Vísbending</button><button type="button" class="sol-btn" aria-expanded="false">Lausn</button></div>
 <div class="hint" data-level="1" hidden><strong>Vísbending 1:</strong> Í a-lið seturðu y-gildin jöfn. Í b-lið er sama stæða, en með <math xmlns="http://www.w3.org/1998/Math/MathML"><mo>&lt;</mo></math> í stað <math xmlns="http://www.w3.org/1998/Math/MathML"><mo>=</mo></math>.</div>
-<div class="answerbox sol" hidden><strong>Lokasvar:</strong> a) <math xmlns="http://www.w3.org/1998/Math/MathML"><mo stretchy="false" lspace="0" rspace="0">(</mo><mo form="prefix" lspace="0" rspace="0">−</mo><mn>1</mn><mo separator="true" lspace="0" rspace="0.35em">,</mo><mn>0</mn><mo stretchy="false" lspace="0" rspace="0">)</mo></math> og <math xmlns="http://www.w3.org/1998/Math/MathML"><mo stretchy="false" lspace="0" rspace="0">(</mo><mn>2</mn><mo separator="true" lspace="0" rspace="0.35em">,</mo><mn>3</mn><mo stretchy="false" lspace="0" rspace="0">)</mo></math>. b) <math xmlns="http://www.w3.org/1998/Math/MathML"><mo stretchy="false" lspace="0" rspace="0">(</mo><mo form="prefix" lspace="0" rspace="0">−</mo><mn>1</mn><mo separator="true" lspace="0" rspace="0.35em">,</mo><mn>2</mn><mo stretchy="false" lspace="0" rspace="0">)</mo></math>.</div>
+<div class="answerbox sol" hidden><strong>Lokasvar:</strong> a) <math xmlns="http://www.w3.org/1998/Math/MathML"><mo stretchy="false" lspace="0" rspace="0">(</mo><mo form="prefix" lspace="0" rspace="0">−</mo><mn>1</mn><mo separator="true" lspace="0" rspace="0.35em">,</mo><mn>0</mn><mo stretchy="false" lspace="0" rspace="0">)</mo></math> og <math xmlns="http://www.w3.org/1998/Math/MathML"><mo stretchy="false" lspace="0" rspace="0">(</mo><mn>2</mn><mo separator="true" lspace="0" rspace="0.35em">,</mo><mn>3</mn><mo stretchy="false" lspace="0" rspace="0">)</mo></math>. b) <math xmlns="http://www.w3.org/1998/Math/MathML"><mo form="prefix" lspace="0" rspace="0">−</mo><mn>1</mn><mo>&lt;</mo><mi>x</mi><mo>&lt;</mo><mn>2</mn></math>.</div>
 <label class="done"><input type="checkbox" data-done="3.7"> Ég hef æft dæmið</label>
 </article>
 <article class="ex extra-ex" id="ex-3-8" data-ex="3.8" data-kind="extra" data-hints="1">
@@ -1076,7 +1075,7 @@ html[data-theme=dark] .save-warn{background:#33281a;border-color:#d39b55}}
 <p><math xmlns="http://www.w3.org/1998/Math/MathML"><mo form="prefix" lspace="0" rspace="0">−</mo><mn>1</mn><mo>&lt;</mo><mn>2</mn><mi>x</mi><mo>+</mo><mn>3</mn><mo>≤</mo><mn>7</mn></math></p>
 <div class="actions"><button type="button" class="hint-btn" aria-controls="ex-3-8">Vísbending</button><button type="button" class="sol-btn" aria-expanded="false">Lausn</button></div>
 <div class="hint" data-level="1" hidden><strong>Vísbending 1:</strong> Gerðu sömu aðgerð á öllum þremur hlutunum. Dragðu fyrst <math xmlns="http://www.w3.org/1998/Math/MathML"><mn>3</mn></math> frá.</div>
-<div class="answerbox sol" hidden><strong>Lokasvar:</strong> <math xmlns="http://www.w3.org/1998/Math/MathML"><mo stretchy="false" lspace="0" rspace="0">(</mo><mo form="prefix" lspace="0" rspace="0">−</mo><mn>2</mn><mo separator="true" lspace="0" rspace="0.35em">,</mo><mn>2</mn><mo stretchy="false" lspace="0" rspace="0">]</mo></math></div>
+<div class="answerbox sol" hidden><strong>Lokasvar:</strong> <math xmlns="http://www.w3.org/1998/Math/MathML"><mo form="prefix" lspace="0" rspace="0">−</mo><mn>2</mn><mo>&lt;</mo><mi>x</mi><mo>≤</mo><mn>2</mn></math></div>
 <label class="done"><input type="checkbox" data-done="3.8"> Ég hef æft dæmið</label>
 </article>
 <article class="ex extra-ex" id="ex-3-9" data-ex="3.9" data-kind="extra" data-hints="1">
@@ -1084,7 +1083,7 @@ html[data-theme=dark] .save-warn{background:#33281a;border-color:#d39b55}}
 <p><math xmlns="http://www.w3.org/1998/Math/MathML"><mo stretchy="false" lspace="0" rspace="0">(</mo><mi>x</mi><mo>+</mo><mn>1</mn><mo stretchy="false" lspace="0" rspace="0">)</mo><mo stretchy="false" lspace="0" rspace="0">(</mo><mi>x</mi><mo>−</mo><mn>3</mn><mo stretchy="false" lspace="0" rspace="0">)</mo><mo>≤</mo><mn>5</mn></math></p>
 <div class="actions"><button type="button" class="hint-btn" aria-controls="ex-3-9">Vísbending</button><button type="button" class="sol-btn" aria-expanded="false">Lausn</button></div>
 <div class="hint" data-level="1" hidden><strong>Vísbending 1:</strong> Hægri hliðin er ekki 0, svo ekki má nota þættina beint. Margfaldaðu út og færðu 5 yfir.</div>
-<div class="answerbox sol" hidden><strong>Lokasvar:</strong> <math xmlns="http://www.w3.org/1998/Math/MathML"><mo stretchy="false" lspace="0" rspace="0">[</mo><mo form="prefix" lspace="0" rspace="0">−</mo><mn>2</mn><mo separator="true" lspace="0" rspace="0.35em">,</mo><mn>4</mn><mo stretchy="false" lspace="0" rspace="0">]</mo></math></div>
+<div class="answerbox sol" hidden><strong>Lokasvar:</strong> <math xmlns="http://www.w3.org/1998/Math/MathML"><mo form="prefix" lspace="0" rspace="0">−</mo><mn>2</mn><mo>≤</mo><mi>x</mi><mo>≤</mo><mn>4</mn></math></div>
 <label class="done"><input type="checkbox" data-done="3.9"> Ég hef æft dæmið</label>
 </article>
 <article class="ex extra-ex" id="ex-3-10" data-ex="3.10" data-kind="extra" data-hints="1">
@@ -1092,7 +1091,7 @@ html[data-theme=dark] .save-warn{background:#33281a;border-color:#d39b55}}
 <p>Finndu öll x sem uppfylla bæði <math xmlns="http://www.w3.org/1998/Math/MathML"><msup><mi>x</mi><mn>2</mn></msup><mo>−</mo><mn>4</mn><mo>&lt;</mo><mn>0</mn></math> og <math xmlns="http://www.w3.org/1998/Math/MathML"><mn>2</mn><mi>x</mi><mo>−</mo><mn>1</mn><mo>&gt;</mo><mn>0</mn></math>.</p>
 <div class="actions"><button type="button" class="hint-btn" aria-controls="ex-3-10">Vísbending</button><button type="button" class="sol-btn" aria-expanded="false">Lausn</button></div>
 <div class="hint" data-level="1" hidden><strong>Vísbending 1:</strong> Leystu hvora ójöfnu fyrir sig og teiknaðu bæði lausnamengin á sömu talnalínu. Hvar skarast þau?</div>
-<div class="answerbox sol" hidden><strong>Lokasvar:</strong> <math xmlns="http://www.w3.org/1998/Math/MathML"><mo stretchy="false" lspace="0" rspace="0">(</mo><mfrac><mrow><mn>1</mn></mrow><mrow><mn>2</mn></mrow></mfrac><mo separator="true" lspace="0" rspace="0.35em">,</mo><mn>2</mn><mo stretchy="false" lspace="0" rspace="0">)</mo></math></div>
+<div class="answerbox sol" hidden><strong>Lokasvar:</strong> <math xmlns="http://www.w3.org/1998/Math/MathML"><mfrac><mrow><mn>1</mn></mrow><mrow><mn>2</mn></mrow></mfrac><mo>&lt;</mo><mi>x</mi><mo>&lt;</mo><mn>2</mn></math></div>
 <label class="done"><input type="checkbox" data-done="3.10"> Ég hef æft dæmið</label>
 </article>
 </div>
@@ -1114,8 +1113,8 @@ html[data-theme=dark] .save-warn{background:#33281a;border-color:#d39b55}}
 <p>Reiknaðu á blað og sýndu öll skref. Hér eru hvorki vísbendingar né lausnir: skiladæmið sýnir hvað þú getur án hjálpar.</p>
 <ol class="skil-list" type="a">
 <li>Finndu skurðpunkta fleygbogans <math xmlns="http://www.w3.org/1998/Math/MathML"><mi>y</mi><mo>=</mo><msup><mi>x</mi><mn>2</mn></msup><mo>+</mo><mi>x</mi><mo>−</mo><mn>4</mn></math> og línunnar <math xmlns="http://www.w3.org/1998/Math/MathML"><mi>y</mi><mo>=</mo><mn>2</mn><mi>x</mi><mo>+</mo><mn>2</mn></math>. Prófaðu báða punktana.</li>
-<li>Fyrir hvaða x liggur fleygboginn úr a-lið fyrir neðan línuna? Rökstyddu svarið, annaðhvort með formerkjum á bilum eða með grafi, og ritaðu lausnamengið með bilaskrift.</li>
-<li>Leystu ójöfnuna <math xmlns="http://www.w3.org/1998/Math/MathML"><mn>5</mn><mo>−</mo><mn>2</mn><mi>x</mi><mo>≥</mo><mn>3</mn><mi>x</mi><mo>−</mo><mn>10</mn></math> og ritaðu lausnamengið með bilaskrift.</li>
+<li>Fyrir hvaða x liggur fleygboginn úr a-lið fyrir neðan línuna? Rökstyddu svarið, annaðhvort með formerkjum á bilum eða með grafi, og skrifaðu lausnina sem ójöfnu eða sýndu hana á talnalínu.</li>
+<li>Leystu ójöfnuna <math xmlns="http://www.w3.org/1998/Math/MathML"><mn>5</mn><mo>−</mo><mn>2</mn><mi>x</mi><mo>≥</mo><mn>3</mn><mi>x</mi><mo>−</mo><mn>10</mn></math> og skrifaðu lausnina sem ójöfnu eða sýndu hana á talnalínu.</li>
 </ol>
 <p>Vandaðu framsetninguna: skýr skref, eitt skref í hverri línu, rétt táknmál og skýr niðurstaða í hverjum lið. Framsetning gefur stig í öllum liðum.</p>
 <details class="rubric" id="matskvardi"><summary>Skoða matskvarða · 25 stig</summary>
@@ -1124,21 +1123,21 @@ html[data-theme=dark] .save-warn{background:#33281a;border-color:#d39b55}}
 <tr><td>Jafnan leyst rétt, bæði x-gildin fundin</td><td>2</td></tr>
 <tr><td>y-hnit beggja skurðpunkta</td><td>2</td></tr>
 <tr><td>Prófun: hvor punktur prófaður í jöfnunni sem ekki var notuð til að reikna y, eða í báðum (1 stig fyrir hvorn punkt)</td><td>2</td></tr>
-<tr><td><strong>Framsetning:</strong> skýr skref, rétt táknmál (veldi, svigar, jafnaðarmerki og punktar ritaðir sem <math xmlns="http://www.w3.org/1998/Math/MathML"><mo stretchy="false" lspace="0" rspace="0">(</mo><mi>x</mi><mo separator="true" lspace="0" rspace="0.35em">,</mo><mi>y</mi><mo stretchy="false" lspace="0" rspace="0">)</mo></math>) og skýr niðurstaða þar sem báðir skurðpunktarnir eru tilgreindir</td><td>2</td></tr>
+<tr><td><strong>Framsetning:</strong> skýr skref, rétt táknmál (veldi, svigar, jafnaðarmerki og punktar ritaðir sem <math xmlns="http://www.w3.org/1998/Math/MathML"><mi>x</mi><mo>&lt;</mo><mi>x</mi><mo>&lt;</mo><mi>y</mi></math>) og skýr niðurstaða þar sem báðir skurðpunktarnir eru tilgreindir</td><td>2</td></tr>
 <tr><th scope="rowgroup" rowspan="4">b) Ójafna<br><span class="note">9 stig</span></th><td>Ójafnan sett upp og færð á formið <math xmlns="http://www.w3.org/1998/Math/MathML"><mi>a</mi><msup><mi>x</mi><mn>2</mn></msup><mo>+</mo><mi>b</mi><mi>x</mi><mo>+</mo><mi>c</mi><mo>&lt;</mo><mn>0</mn></math></td><td>2</td></tr>
 <tr><td>Rökstuðningur: formerki á bilum eða graf sem sýnir hvar fleygboginn er fyrir neðan</td><td>3</td></tr>
-<tr><td>Lausn með bilaskrift og réttum endapunktum</td><td>2</td></tr>
-<tr><td><strong>Framsetning:</strong> skýr skref og skýr niðurstaða. Ef graf er teiknað: ásar merktir og núllstöðvar eða skurðpunktar sýndir. Ef formerki eru notuð: bilin og prófunargildin skýr. Rétt táknmál: ójöfnumerki og bilaskrift</td><td>2</td></tr>
+<tr><td>Lausn sem ójafna eða á talnalínu, með réttum endapunktum</td><td>2</td></tr>
+<tr><td><strong>Framsetning:</strong> skýr skref og skýr niðurstaða. Ef graf er teiknað: ásar merktir og núllstöðvar eða skurðpunktar sýndir. Ef formerki eru notuð: bilin og prófunargildin skýr. Rétt táknmál: ójöfnumerki, og opnir eða fylltir endapunktar ef talnalína er teiknuð</td><td>2</td></tr>
 <tr><th scope="rowgroup" rowspan="4">c) Fyrsta stigs ójafna<br><span class="note">6 stig</span></th><td>Liðum safnað rétt saman</td><td>2</td></tr>
 <tr><td>Rétt meðferð ójöfnumerkis (snúið við ef deilt er með neikvæðri tölu)</td><td>1</td></tr>
-<tr><td>Lausn með bilaskrift</td><td>1</td></tr>
-<tr><td><strong>Framsetning:</strong> skýr skref (ein aðgerð í hverri línu), rétt táknmál (ójöfnumerki í hverri línu og bilaskrift) og skýr niðurstaða</td><td>2</td></tr>
+<tr><td>Lausn sem ójafna eða á talnalínu</td><td>1</td></tr>
+<tr><td><strong>Framsetning:</strong> skýr skref (ein aðgerð í hverri línu), rétt táknmál (ójöfnumerki í hverri línu) og skýr niðurstaða</td><td>2</td></tr>
 <tr class="sum"><th scope="row" colspan="2">Samtals</th><td>25</td></tr>
 </tbody></table></div>
 <p class="note">Framsetning í hverjum lið: 2 stig ef allt er í lagi, 1 stig ef galli er í einu atriði og 0 ef gallar eru fleiri eða trufla skilning. Villa er aðeins dregin frá einu sinni. Ef þú heldur rétt áfram út frá eigin villu fást stig fyrir þau skref sem eru rétt. Önnur gild aðferð, t.d. lausnarformúlan, gefur full stig.</p>
 </details>
 <div class="defbox"><h3>Stig fyrir Vikuskil 5 · 50 stig</h3><ul>
-<li><strong>Æfingadæmi, allt að 25 stig:</strong> <math xmlns="http://www.w3.org/1998/Math/MathML"><mn>25</mn><mo>·</mo><mfrac><mrow><mi>n</mi></mrow><mrow><mn>18</mn></mrow></mfrac></math>, þar sem n er fjöldi kjarnadæma sem þú hefur reynt (línan „Kjarnadæmi reynd“ í vinnuskránni). Tilraun telst óháð því hvort svarið er rétt.</li>
+<li><strong>Æfingadæmi, allt að 25 stig:</strong> <math xmlns="http://www.w3.org/1998/Math/MathML"><mn>25</mn><mo>·</mo><mfrac><mrow><mi>n</mi></mrow><mrow><mn>15</mn></mrow></mfrac></math>, þar sem n er fjöldi kjarnadæma sem þú hefur reynt (línan „Kjarnadæmi reynd“ í vinnuskránni). Tilraun telst óháð því hvort svarið er rétt.</li>
 <li><strong>Skiladæmi, allt að 25 stig:</strong> samkvæmt matskvarðanum.</li>
 </ul></div>
 <div class="defbox"><p><strong>Skil:</strong> Ljósmynd eða skönnun af lausninni og vinnuskráin sem PDF fara í Canvas (Vikuskil 5). Skilafrestur er mánudagurinn 23. nóvember kl. 13:00.</p></div>
@@ -1180,7 +1179,7 @@ html[data-theme=dark] .save-warn{background:#33281a;border-color:#d39b55}}
 'use strict';
 // Vistunarlykill viku 5. Má ekki breyta eftir birtingu; annars glatast vistuð hök nemenda.
 const KEY = 'staer2af05-v5-vefbok-v1';
-const REV = 'STAER2AF05-V05-VB-v0.7-20261118';
+const REV = 'STAER2AF05-V05-VB-v1.0-20261118';
 const $ = id => document.getElementById(id);
 // Svið úr v0.3 (done, quiz, poe, k) eru óbreytt. v0.4 bætir við tpoe, fpoe og tasks.
 let state = { done: {}, quiz: {}, poe: {}, k: 2, tpoe: {}, fpoe: null, tasks: {} };
@@ -1329,6 +1328,7 @@ function showLocked(fs, store, prefix) {
   box.className = 'feedback ' + (ok ? 'good' : 'bad');
   box.innerHTML = (prefix ? '<strong>' + (ok ? 'Spáin stóðst.' : 'Spáin stóðst ekki.') + '</strong> ' : '') + (tpl ? tpl.innerHTML : '');
 }
+let tpX = 0.5;
 function drawTpoe() {
   const f = x => x * x - 2 * x - 3, curves = [{ fn: f, color: PARA }], segs = [], labels = [];
   if (state.tpoe.th1 !== undefined) { curves.push({ fn: x => (x > -1 && x < 3) ? f(x) : NaN, color: HL, width: 6 }); segs.push({ a: -1, b: 3, ca: false, cb: false, color: HL }); labels.push({ x: 1, y: -4.6, text: 'y < 0', color: HL, size: 13 }); }
@@ -1338,6 +1338,40 @@ function drawTpoe() {
     labels.push({ x: 4.3, y: 1, text: 'y ≥ 0', color: HL2, size: 13 });
   }
   plot($('tpoeGraph'), { xmin: -3, xmax: 5, ymin: -5, ymax: 6, curves, segs, labels, points: [{ x: -1, y: 0, label: '−1' }, { x: 3, y: 0, label: '3' }] });
+  drawDragPoint();
+}
+// Dráttarpunktur: nemandinn rennir punkti eftir ferlinum og sér x- og y-gildið breytast.
+const TP = { xmin: -3, xmax: 5, ymin: -5, ymax: 6, L: 40, R: 14, T: 12, Bm: 30, W: 460, H: 360, lo: -2.1, hi: 4.1 };
+const tpSx = x => TP.L + (x - TP.xmin) / (TP.xmax - TP.xmin) * (TP.W - TP.L - TP.R);
+const tpSy = y => TP.T + (TP.ymax - y) / (TP.ymax - TP.ymin) * (TP.H - TP.T - TP.Bm);
+function drawDragPoint() {
+  const svg = $('tpoeGraph'), read = $('tpoeRead'), on = state.tpoe.th1 !== undefined;
+  svg.classList.toggle('drag-on', on);
+  if (on) svg.setAttribute('tabindex', '0'); else svg.removeAttribute('tabindex');
+  read.hidden = !on;
+  if (!on) { svg.setAttribute('role', 'img'); return; }
+  const x = tpX, y = x * x - 2 * x - 3, col = y < -1e-9 ? HL : y > 1e-9 ? HL2 : '#145b80';
+  svg.append(node('line', { x1: tpSx(x), y1: tpSy(0), x2: tpSx(x), y2: tpSy(y), stroke: col, 'stroke-width': 2, 'stroke-dasharray': '5 4' }));
+  svg.append(node('circle', { cx: tpSx(x), cy: tpSy(y), r: 9, fill: col, stroke: 'white', 'stroke-width': 2.5 }));
+  const where = y < -1e-9 ? 'y < 0: punkturinn er fyrir neðan x-ásinn.' : y > 1e-9 ? 'y > 0: punkturinn er fyrir ofan x-ásinn.' : 'y = 0: punkturinn er á x-ásnum (núllstöð).';
+  read.innerHTML = '<span class="vals">x = ' + fmt(x) + ' &#160; y = ' + fmt(y) + '</span><br>' + where;
+  read.className = 'feedback' + (y < -1e-9 ? ' bad' : y > 1e-9 ? '' : ' good');
+  svg.setAttribute('role', 'slider'); svg.setAttribute('aria-valuemin', TP.lo); svg.setAttribute('aria-valuemax', TP.hi); svg.setAttribute('aria-valuenow', x);
+  svg.setAttribute('aria-valuetext', 'x = ' + fmt(x) + ', y = ' + fmt(y));
+}
+function setTpX(x) { tpX = Math.round(Math.min(TP.hi, Math.max(TP.lo, x)) * 10) / 10; drawTpoe(); }
+function setupDrag() {
+  const svg = $('tpoeGraph'); let drag = false;
+  const toX = e => { const r = svg.getBoundingClientRect(); const px = (e.clientX - r.left) * TP.W / r.width; return TP.xmin + (px - TP.L) / (TP.W - TP.L - TP.R) * (TP.xmax - TP.xmin); };
+  svg.addEventListener('pointerdown', e => { if (state.tpoe.th1 === undefined) return; drag = true; try { svg.setPointerCapture(e.pointerId); } catch (er) {} setTpX(toX(e)); });
+  svg.addEventListener('pointermove', e => { if (drag) setTpX(toX(e)); });
+  const stop = () => { drag = false; };
+  svg.addEventListener('pointerup', stop); svg.addEventListener('pointercancel', stop);
+  svg.addEventListener('keydown', e => {
+    if (state.tpoe.th1 === undefined) return;
+    if (e.key === 'ArrowLeft' || e.key === 'ArrowDown') { e.preventDefault(); setTpX(tpX - 0.1); }
+    if (e.key === 'ArrowRight' || e.key === 'ArrowUp') { e.preventDefault(); setTpX(tpX + 0.1); }
+  });
 }
 function setupLocked() {
   document.querySelectorAll('fieldset.tpoe').forEach(fs => {
@@ -1347,7 +1381,7 @@ function setupLocked() {
     }));
     showLocked(fs, state.tpoe, true);
   });
-  drawTpoe();
+  drawTpoe(); setupDrag();
   const fp = document.querySelector('fieldset.fpoe');
   if (fp) {
     const store = { fp1: state.fpoe };
@@ -1384,12 +1418,13 @@ function cSolution(c, rel) {
   let text, html;
   if (r.length === 2) {
     const [a, b] = r, L = R.strict ? '(' : '[', Rb = R.strict ? ')' : ']';
-    if (R.neg) { segs.push({ a: a.v, b: b.v, ca: !R.strict, cb: !R.strict }); html = MATH(OP(L) + a.m + SEP + b.m + OP(Rb)); text = 'Fleygboginn er fyrir neðan ásinn milli núllstöðvanna' + (R.strict ? '. Núllstöðvarnar eru ekki með.' : ', og núllstöðvarnar eru með.'); }
-    else { segs.push({ a: -Infinity, b: a.v, cb: !R.strict }, { a: b.v, b: Infinity, ca: !R.strict }); html = MATH(OP('(') + NINF + SEP + a.m + OP(Rb) + EDA + OP(L) + b.m + SEP + INF + OP(')')); text = 'Fleygboginn er fyrir ofan ásinn utan við núllstöðvarnar' + (R.strict ? '. Núllstöðvarnar eru ekki með.' : ', og núllstöðvarnar eru með.'); }
+    const lt = R.strict ? '<mo>&lt;</mo>' : '<mo>≤</mo>', gt = R.strict ? '<mo>&gt;</mo>' : '<mo>≥</mo>';
+    if (R.neg) { segs.push({ a: a.v, b: b.v, ca: !R.strict, cb: !R.strict }); html = MATH(a.m + lt + '<mi>x</mi>' + lt + b.m); text = 'Fleygboginn er fyrir neðan ásinn milli núllstöðvanna' + (R.strict ? '. Núllstöðvarnar eru ekki með.' : ', og núllstöðvarnar eru með.'); }
+    else { segs.push({ a: -Infinity, b: a.v, cb: !R.strict }, { a: b.v, b: Infinity, ca: !R.strict }); html = MATH('<mi>x</mi>' + lt + a.m + EDA + '<mi>x</mi>' + gt + b.m); text = 'Fleygboginn er fyrir ofan ásinn utan við núllstöðvarnar' + (R.strict ? '. Núllstöðvarnar eru ekki með.' : ', og núllstöðvarnar eru með.'); }
   } else if (r.length === 1) {
     if (rel === 'lt') { html = 'Engin lausn'; text = 'Fleygboginn snertir ásinn í x = 1 en fer aldrei niður fyrir hann.'; }
     else if (rel === 'le') { segs.push({ a: 1, b: 1, ca: true, cb: true }); html = 'Aðeins ' + MATH('<mi>x</mi><mo>=</mo><mn>1</mn>'); text = 'Fleygboginn snertir ásinn í einum punkti. Þar er y = 0.'; }
-    else if (rel === 'gt') { segs.push({ a: -Infinity, b: 1, cb: false }, { a: 1, b: Infinity, ca: false }); html = MATH(OP('(') + NINF + SEP + '<mn>1</mn>' + OP(')') + EDA + OP('(') + '<mn>1</mn>' + SEP + INF + OP(')')); text = 'Fleygboginn er fyrir ofan ásinn alls staðar nema í x = 1, þar sem y = 0.'; }
+    else if (rel === 'gt') { segs.push({ a: -Infinity, b: 1, cb: false }, { a: 1, b: Infinity, ca: false }); html = 'Allar rauntölur nema ' + MATH('<mi>x</mi><mo>=</mo><mn>1</mn>'); text = 'Fleygboginn er fyrir ofan ásinn alls staðar nema í x = 1, þar sem y = 0.'; }
     else { segs.push({ a: -Infinity, b: Infinity }); html = 'Allar rauntölur'; text = 'Fleygboginn er aldrei fyrir neðan ásinn.'; }
   } else {
     if (R.neg) { html = 'Engin lausn'; text = 'Fleygboginn opnast upp og sker ekki ásinn, svo hann er alltaf fyrir ofan hann.'; }
@@ -1531,8 +1566,8 @@ function exportAll() {
 // Dagsíður verða sjálfgefnar á sínum degi. Gamla slóðin #thridjudagur vísar á skurðpunktasíðuna.
 const DAYS = [{ id: 'midvikudagur', date: '2026-11-18' }, { id: 'fimmtudagur', date: '2026-11-19' }, { id: 'fostudagur', date: '2026-11-20' }];
 function todayISO() { const t = new Date(); return t.getFullYear() + '-' + String(t.getMonth() + 1).padStart(2, '0') + '-' + String(t.getDate()).padStart(2, '0'); }
-function route() {
-  let h = decodeURIComponent(location.hash.slice(1));
+function route(target) {
+  let h = typeof target === 'string' ? target : decodeURIComponent(location.hash.slice(1));
   if (h === 'thridjudagur') h = 'midvikudagur';
   let el = h ? document.getElementById(h) : null;
   let sec = el ? (el.matches('section.day') ? el : el.closest('section.day')) : null;
@@ -1542,6 +1577,22 @@ function route() {
   if (el && el !== sec) el.scrollIntoView();
   else if (h) window.scrollTo(0, 0);
 }
+// Innri tenglar eru meðhöndlaðir í JS. Í innfelldum forskoðunum (sandkassi, Canvas-iframe) mistekst
+// venjuleg #-leiðsögn, svo síðan skiptir sjálf um dag og reynir síðan að uppfæra slóðina.
+function navTo(id) {
+  try { history.pushState(null, '', '#' + id); } catch (e) {}
+  route(id);
+  const back = $('backBtn'), t = back && back.dataset.target;
+  if (t && $(t) && !$(t).closest('section.day').contains(document.getElementById(id))) back.hidden = true;
+}
+document.addEventListener('click', e => {
+  const a = e.target.closest && e.target.closest('a[href^="#"]');
+  if (!a || e.defaultPrevented) return;
+  const id = decodeURIComponent(a.getAttribute('href').slice(1));
+  if (!id || !document.getElementById(id)) return;
+  e.preventDefault();
+  navTo(id);
+});
 
 /* ---------- Ljóst / dökkt útlit (sér lykill; snertir ekki vistuð svör) ---------- */
 const THEME_KEY = 'staer2af05-utlit';
@@ -1568,6 +1619,7 @@ const NL = {
   nl4: { min: -2, max: 6, ticks: [0, 2], segs: [{ a: 2, b: Infinity, ca: true }] },
   nl5: { min: -4, max: 6, ticks: [-1, 3], segs: [{ a: -Infinity, b: -1, cb: false }, { a: 3, b: Infinity, ca: false }] },
   v2nl: { min: -2, max: 7, ticks: [0, 5], segs: [{ a: 0, b: 5, ca: true, cb: false }] },
+  frnl: { min: -4, max: 7, ticks: [-2, 5], segs: [{ a: -2, b: 5, ca: false, cb: true }] },
 };
 function init() {
   setupTheme();
@@ -1578,7 +1630,7 @@ function init() {
   document.querySelectorAll('a.exlink').forEach(a => a.addEventListener('click', () => {
     const ex = a.closest('.ex'); back.textContent = '↑ Aftur í dæmi ' + ex.dataset.ex; back.dataset.target = ex.id; back.hidden = false;
   }));
-  back.addEventListener('click', () => { location.hash = '#' + back.dataset.target; back.hidden = true; });
+  back.addEventListener('click', () => { const t = back.dataset.target; back.hidden = true; navTo(t); });
   window.addEventListener('hashchange', () => { const t = back.dataset.target; if (t && !$(t).closest('section.day').contains(document.getElementById(location.hash.slice(1)))) back.hidden = true; });
   document.querySelectorAll('fieldset.poe').forEach(fs => {
     const id = fs.dataset.line;
@@ -1606,7 +1658,7 @@ function init() {
   renderLog();
   $('printBtn').addEventListener('click', printReport);
   $('exportBtn').addEventListener('click', exportAll);
-  route(); window.addEventListener('hashchange', route);
+  route(); window.addEventListener('hashchange', () => route()); window.addEventListener('popstate', () => route());
   document.documentElement.classList.add('ready');
   $('clearBtn').addEventListener('click', () => { if (confirm('Hreinsa öll vistuð hök og svör í vefbók viku 5?')) { try { localStorage.removeItem(KEY); } catch (e) {} location.reload(); } });
   window.__vika5 = { KEY, REV, state: () => state, cSolution };
